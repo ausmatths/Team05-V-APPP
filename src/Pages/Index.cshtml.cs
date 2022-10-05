@@ -10,7 +10,7 @@ namespace ContosoCrafts.WebSite.Pages
 {
     public class IndexModel : PageModel
     {
-        //Hi Mike
+        //Hi Team V-APPP
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger,
