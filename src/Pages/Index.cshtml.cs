@@ -8,9 +8,12 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+    /// <summary> 
+    /// Priya Bhardwaj
+    /// </summary>
     public class IndexModel : PageModel
     {
-        //Hi Team V-APPP
+        
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger,
