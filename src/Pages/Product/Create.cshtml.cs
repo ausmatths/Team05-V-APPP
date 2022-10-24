@@ -1,3 +1,4 @@
+using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -16,6 +17,11 @@ namespace ContosoCrafts.WebSite.Pages.Product
             _logger = logger;
             ProductService = productService;
 
+        }
+
+        public void AddProduct(ProductModel product)
+        {
+            ProductService.CreateData(product);
         }
 
         public void OnGet()
