@@ -145,15 +145,15 @@ namespace ContosoCrafts.WebSite.Services
         /// After create the user can update to set values
         /// </summary>
         /// <returns></returns>
-        public ProductModel CreateData()
+        public ProductModel CreateData(ProductModel product)
         {
             var data = new ProductModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
-                Title = "Enter Title",
-                Description = "Enter Description",
-                Url = "Enter URL",
-                Image = "",
+                Title = product.Title,
+                Description = product.Description,
+                Url = product.Url,
+                Image = product.Image,
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
