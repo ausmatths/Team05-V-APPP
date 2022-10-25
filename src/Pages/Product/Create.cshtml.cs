@@ -21,9 +21,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
         }
 
-        public void OnPost(ProductModel product)
+        public IActionResult OnPost(ProductModel product)
         {
             ProductService.CreateData(product);
+            return RedirectToPage("./Index");
         }
 
         public void OnGet()
