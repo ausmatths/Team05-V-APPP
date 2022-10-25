@@ -11,6 +11,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
         private readonly ILogger<CreateModel> _logger;
         public JsonFileProductService ProductService { get; }
 
+        public ProductModel product { get; private set; }
+
         public CreateModel(ILogger<CreateModel> logger,
             JsonFileProductService productService)
         {
@@ -19,7 +21,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
         }
 
-        public void AddProduct(ProductModel product)
+        public void OnPost(ProductModel product)
         {
             ProductService.CreateData(product);
         }
