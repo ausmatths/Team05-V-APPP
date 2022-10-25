@@ -7,7 +7,9 @@
     ViewData["Title"] = "Read page";
 }
 
-<div class="content">
+<h1>Read</h1>
+
+<div class="container">
     <h5 class="title" id="productTitle">@Model.Product.Title</h5>
 
     <img class="card-img" src='@Model.Product.Image' alt='Image for @Model.Product.Title'>
@@ -16,4 +18,34 @@
 
 </div>
 
+@{
+    // If there are Comments, show them.
+    if (Model.Product.CommentList.Count > 0)
+    {
+        <br />
+        <br />
 
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var comment in Model.Product.CommentList)
+                {
+                    
+                }
+            </tbody>
+        </table>
+    }
+}
+
+<br />
+<br />
+
+<div class="row">
+    <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
+    
+</div>
