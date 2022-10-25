@@ -1,46 +1,48 @@
 ﻿@page
-@model ContosoCrafts.WebSite.Pages.Product.CreateModel
+@using ContosoCrafts.WebSite.Components
+@model CreateModel
 @{
     ViewData["Title"] = "Create/Update Product";
 }
 
 <div class="container-fluid">
-    <h1>Create</h1>
+    <form method="post">
+        <h1>Create</h1>
 
-    <label for="title">Title</label>
-    <input id="title"
-           class="form-control"
-           type="text"
-           placeholder="Title" />
+            <label asp-for="product.Title">Title</label>
+            <input asp-for="product.Title"
+               class="form-control"
+               type="text"
+               placeholder="Title" />
 
-    <label for="description">Description</label>
-    <input id="description"
-           class="form-control"
-           type="text"
-           placeholder="Description" />
+        <label asp-for="product.Maker">Maker</label>
+        <input asp-for="product.Maker"
+               class="form-control"
+               type="text"
+               placeholder="Maker" />
 
-    <label for="quantity">Quantity</label>
-    <input id="quantity"
-           class="form-control"
-           type="text"
-           placeholder="Quantity" />
+        <label asp-for="product.Description">Description</label>
+        <input asp-for="product.Description"
+               class="form-control"
+               type="text"
+               placeholder="Description" />
 
-    <label for="price">Price</label>
-    <input id="price"
-           class="form-control"
-           type="text"
-           placeholder="Price" />
+        <label asp-for="product.Quantity">Quantity</label>
+        <input asp-for="product.Quantity"
+               class="form-control"
+               type="text"
+               placeholder="Quantity" />
 
-    <label for="comments">Comments</label>
-    <input id="comments"
-           class="form-control"
-           type="text"
-           placeholder="Comments" />
+        <label asp-for="product.Price">Price</label>
+        <input asp-for="product.Price"
+               class="form-control"
+               type="text"
+               placeholder="Price" />
 
-    <label></label>
-    <button onclick=""
-            class="form-control btn btn-primary">
-        Save
-    </button>
-
+        <label></label>
+        <button type="submit"
+                class="btn btn-primary">
+            Save
+        </button>
+    </form>
 </div>
