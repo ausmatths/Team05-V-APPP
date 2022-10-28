@@ -227,13 +227,13 @@
         
 
 
-        // Add it to the Comment List
+        
         selectedProduct.CommentList.Add(new CommentModel() { Comment = NewCommentText });
 
-        // Call for the Product to be saved
+        
         ProductService.UpdateData(selectedProduct);
 
-        // Set the NewComment flag to false to hide the input box
+        
         NewComment = false;
     }
 
@@ -248,13 +248,13 @@
 
     void EnableFilterData()
     {
-        // If the Filter is enabled, set the filter flag
+        
         FilterData = true;
     }
 
     void ClearFilterData()
     {
-        // If the Filter is enabled, set the filter flag
+        
         FilterData = false;
     }
 }
