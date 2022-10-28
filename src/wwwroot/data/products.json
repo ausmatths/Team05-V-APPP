@@ -27,7 +27,7 @@
     "Title": "Mercedes Maybach S Class",
     "Description": "The Mercedes-Benz S-class maintains superiority by being the full-size luxury sedan.The S-class satisfies the tastes of its moneyed clientele with stacks of fine materials, deep-seated comfort, and loads of technology. ",
     "Ratings": null,
-    "ProductType": 1,
+    "ProductType": 130,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -40,7 +40,7 @@
     "Title": "Jeep Cherokee",
     "Description": "The 2022 Jeep Grand Cherokee is the most awarded SUV ever. It comes with 3.6-liter V-6 engine and generates 293 horsepower.",
     "Ratings": null,
-    "ProductType": 55,
+    "ProductType": 5,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -53,7 +53,7 @@
     "Title": "Nissan GT-R",
     "Description": "Nissan GT-R is the high performance sports car with 3.8L Twin turbo charged VR38DETT V6",
     "Ratings": null,
-    "ProductType": 1,
+    "ProductType": 55,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -83,7 +83,7 @@
     "Ratings": [
       4
     ],
-    "ProductType": 1,
+    "ProductType": 130,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -96,7 +96,7 @@
     "Title": "Chevrolet Corvette (C8)",
     "Description": "Chevrolet Corvette (C8) is the eighth generation sports car by chevrolet with 6.2L crossplane OH V8 Engine .",
     "Ratings": null,
-    "ProductType": 130,
+    "ProductType": 55,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -109,7 +109,7 @@
     "Title": "Toyota RAV-4",
     "Description": "Toyota RAV-4 is a mid size luxury SUV with latest tech speifications and direct shift 8 speed automatic transmission",
     "Ratings": null,
-    "ProductType": 1,
+    "ProductType": 5,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -122,7 +122,7 @@
     "Title": "Volkswagen Golf GTI",
     "Description": "The Volkswagen Golf GTI pioneered the hot-hatchback genre and now with more modern interior features, but it still possesses the fun-to-drive nature that makes it a performance icon. A turbocharged, 2.0-liter, 241-hp four-cylinder .",
     "Ratings": null,
-    "ProductType": 55,
+    "ProductType": 1,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -135,7 +135,7 @@
     "Title": "Jeep Wrangler",
     "Description": "Jeep Wrangler is the 4 wheel drive SUV with 470 HP V8 powered engine ",
     "Ratings": null,
-    "ProductType": 1,
+    "ProductType": 5,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -148,7 +148,7 @@
     "Title": "Lincoln Continental",
     "Description": "Lincoln Continental is the premium SUV with high performance engine of 250hp 2.0 liter four cylinde.",
     "Ratings": null,
-    "ProductType": 1,
+    "ProductType": 130,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -161,7 +161,7 @@
     "Title": "GMC Canyon",
     "Description": "GMC Canyon is known as the Herculean with 401hp 6.6 liter V8 with luxury 10 speed automatic transmission",
     "Ratings": null,
-    "ProductType": 0,
+    "ProductType": 5,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -174,7 +174,7 @@
     "Title": "Subaru Impreza",
     "Description": "Subaru Impreza is the 4 seater sedan with four engines of 1.5 liters ",
     "Ratings": null,
-    "ProductType": 0,
+    "ProductType": 130,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -187,7 +187,7 @@
     "Title": "Honda Pilot EX-L",
     "Description": "Honda Pilot EX-L is the mid size SUV with 3.5L engine and 280 @ 6000RPM horsepower of 2019 Model.",
     "Ratings": null,
-    "ProductType": 0,
+    "ProductType": 5,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -200,7 +200,7 @@
     "Title": "Volvo XC90",
     "Description": "Volvo XC90 is the mid size luxury SUV of 7 seater with 247hp turbocharged inline-four assisted by a 48-volt mild hybrid system",
     "Ratings": null,
-    "ProductType": 0,
+    "ProductType": 5,
     "Quantity": null,
     "Price": 0,
     "CommentList": []

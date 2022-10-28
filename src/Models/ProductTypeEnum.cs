@@ -8,10 +8,10 @@ namespace ContosoCrafts.WebSite.Models
     public enum ProductTypeEnum
     {
         Undefined = 0,
-        Amature = 1,
+        Amature = 55,
         Antique = 5,
         Collectable = 130,
-        Commercial = 55,
+        Commercial = 1,
     }
 
     public static class ProductTypeEnumExtensions
@@ -20,10 +20,10 @@ namespace ContosoCrafts.WebSite.Models
         {
             return data switch
             {
-                ProductTypeEnum.Amature => "Hand Made Items",
-                ProductTypeEnum.Antique => "Antiques",
-                ProductTypeEnum.Collectable => "Collectables",
-                ProductTypeEnum.Commercial => "Commercial goods",
+                ProductTypeEnum.Amature => "Supercars",
+                ProductTypeEnum.Antique => "SUV",
+                ProductTypeEnum.Collectable => "Sedan",
+                ProductTypeEnum.Commercial => "Hatchback",
  
                 // Default, Unknown
                 _ => "",
