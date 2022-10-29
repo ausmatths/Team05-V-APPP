@@ -13,13 +13,11 @@ namespace UnitTests.Pages.Product.AddRating
 {
     public class JsonFileProductServiceTests
     {
-        IEnumerable<ProductModel> data;
         #region TestSetup
 
         [SetUp]
         public void TestInitialize()
         {
-            this.data = TestHelper.ProductService.GetAllData();
         }
 
         #endregion TestSetup
@@ -27,16 +25,26 @@ namespace UnitTests.Pages.Product.AddRating
         //
         #region CreateData
         [Test]
-        public void CreateData_Valid_Product_Should_Return_True()
+        public void CreateData_Valid_Product_Should_Return_Product()
         {
             // Arrange
+            var data = new ProductModel()
+            {
+                Title = "Test Volvo",
+                Description = "Test Description",
+                Url = "Test Url",
+                Image = "Test Image",
+            };
 
             // Act
-            //var result = TestHelper.ProductService.CreateData(ProductModel product)
+            var result = TestHelper.ProductService.CreateData(data);
                 
 
             // Assert
-            //Assert.AreEqual(false, result);
+            Assert.AreEqual(data.Title, result.Title);
+            Assert.AreEqual(data.Description, result.Description);
+            Assert.AreEqual(data.Url, result.Url);
+            Assert.AreEqual(data.Image, result.Image);
         }
 
         #endregion CreateData
