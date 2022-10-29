@@ -166,7 +166,7 @@ namespace UnitTests.Pages.Product.AddRating
 
         #region TestCleanup
         [TearDown]
-        public void testClean()
+        public void TestClean()
         {
         }
         #endregion TestCleanup
