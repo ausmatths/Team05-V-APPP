@@ -16,7 +16,7 @@
     ],
     "ProductType": 55,
     "Quantity": null,
-    "Price": 0,
+    "Price": 35,
     "CommentList": []
   },
   {
@@ -29,7 +29,7 @@
     "Ratings": null,
     "ProductType": 130,
     "Quantity": null,
-    "Price": 0,
+    "Price": 50,
     "CommentList": []
   },
   {
@@ -42,7 +42,7 @@
     "Ratings": null,
     "ProductType": 5,
     "Quantity": null,
-    "Price": 0,
+    "Price": 30,
     "CommentList": []
   },
   {
@@ -55,7 +55,7 @@
     "Ratings": null,
     "ProductType": 55,
     "Quantity": null,
-    "Price": 0,
+    "Price": 25,
     "CommentList": []
   },
   {
@@ -70,7 +70,7 @@
     ],
     "ProductType": 55,
     "Quantity": null,
-    "Price": 0,
+    "Price": 55,
     "CommentList": []
   },
   {
@@ -85,7 +85,7 @@
     ],
     "ProductType": 130,
     "Quantity": null,
-    "Price": 0,
+    "Price": 50,
     "CommentList": []
   },
   {
@@ -98,7 +98,7 @@
     "Ratings": null,
     "ProductType": 55,
     "Quantity": null,
-    "Price": 0,
+    "Price": 53,
     "CommentList": []
   },
   {
@@ -111,7 +111,7 @@
     "Ratings": null,
     "ProductType": 5,
     "Quantity": null,
-    "Price": 0,
+    "Price": 45,
     "CommentList": []
   },
   {
@@ -124,7 +124,7 @@
     "Ratings": null,
     "ProductType": 1,
     "Quantity": null,
-    "Price": 0,
+    "Price": 43,
     "CommentList": []
   },
   {
@@ -137,7 +137,7 @@
     "Ratings": null,
     "ProductType": 5,
     "Quantity": null,
-    "Price": 0,
+    "Price": 49,
     "CommentList": []
   },
   {
@@ -150,7 +150,7 @@
     "Ratings": null,
     "ProductType": 130,
     "Quantity": null,
-    "Price": 0,
+    "Price": 60,
     "CommentList": []
   },
   {
@@ -163,7 +163,7 @@
     "Ratings": null,
     "ProductType": 5,
     "Quantity": null,
-    "Price": 0,
+    "Price": 38,
     "CommentList": []
   },
   {
@@ -176,7 +176,7 @@
     "Ratings": null,
     "ProductType": 130,
     "Quantity": null,
-    "Price": 0,
+    "Price": 34,
     "CommentList": []
   },
   {
@@ -189,7 +189,7 @@
     "Ratings": null,
     "ProductType": 5,
     "Quantity": null,
-    "Price": 0,
+    "Price": 29,
     "CommentList": []
   },
   {
@@ -202,7 +202,7 @@
     "Ratings": null,
     "ProductType": 5,
     "Quantity": null,
-    "Price": 0,
+    "Price": 55,
     "CommentList": []
   }
 ]
