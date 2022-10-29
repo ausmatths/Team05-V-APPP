@@ -5,19 +5,41 @@ using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
 
 using ContosoCrafts.WebSite.Models;
+using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using System;
 
 namespace UnitTests.Pages.Product.AddRating
 {
     public class JsonFileProductServiceTests
     {
+        IEnumerable<ProductModel> data;
         #region TestSetup
 
         [SetUp]
         public void TestInitialize()
         {
+            this.data = TestHelper.ProductService.GetAllData();
         }
 
         #endregion TestSetup
+
+        //
+        #region CreateData
+        [Test]
+        public void CreateData_Valid_Product_Should_Return_True()
+        {
+            // Arrange
+
+            // Act
+            //var result = TestHelper.ProductService.CreateData(ProductModel product)
+                
+
+            // Assert
+            //Assert.AreEqual(false, result);
+        }
+
+        #endregion CreateData
 
         #region AddRating
         //[Test]
@@ -59,7 +81,7 @@ namespace UnitTests.Pages.Product.AddRating
         }
 
         [Test]
-        public void AddRating_Product_Does_Not_Exist_Should_Return_False()
+        public void AddRating_Invalid_Product_Does_Not_Exist_Should_Return_False()
         {
             // Arrange
 
@@ -141,5 +163,12 @@ namespace UnitTests.Pages.Product.AddRating
         }
 
         #endregion AddRating
+
+        #region TestCleanup
+        [TearDown]
+        public void testClean()
+        {
+        }
+        #endregion TestCleanup
     }
 }
