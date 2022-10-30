@@ -34,7 +34,10 @@
             <tbody>
                 @foreach (var comment in Model.Product.CommentList)
                 {
-                    
+                    <tr>
+                        <td>@comment.Comment</td>
+                        <td><a asp-page="DeleteComment" asp-route-CommentId="@comment.Id" asp-route-ProductId="@Model.Product.Id">Delete</a></td>
+                    </tr>
                 }
             </tbody>
         </table>

@@ -1,51 +1,53 @@
 ﻿@page "{id}"
 @using ContosoCrafts.WebSite.Services
 @inject JsonFileProductService ProductService
-@model ContosoCrafts.WebSite.Pages.Product.ReadModel
+@model ContosoCrafts.WebSite.Pages.Product.DeleteModel
 
 @{
     ViewData["Title"] = "Delete page";
 }
 
+<h1>Delete</h1>
+
 <div class="container">
-    <h5 class="title" id="productTitle">@Model.Product.Title</h5>
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Product.Id)
 
-    <img class="card-img" src='@Model.Product.Image' alt='Image for @Model.Product.Title'>
+        <div class="form-group">
+            <label asp-for="Product.Title" class="control-label"></label>
+            <input asp-for="Product.Title" class="form-control" disabled />
+        </div>
 
-    <p class="card-text">@Model.Product.Description</p>
+        <div class="form-group">
+            <label asp-for="Product.Description" class="control-label"></label>
+            <input asp-for="Product.Description" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Url" class="control-label"></label>
+            <input asp-for="Product.Url" class="form-control" disabled />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Image" class="control-label"></label>
+            <input asp-for="Product.Image" class="form-control" disabled />
+        </div>
+
+        <h1>Are you Sure you want to delete the product?</h1>
+
+        <div class="form-group">
+            <input type="submit" value="Yes" class="btn btn-primary" /> &nbsp; &nbsp;
+        </div>
+        <div class="form-group">
+            <input type="submit" value="No" class="btn btn-primary" /> 
+        </div>
+    </form>
 
 </div>
 
-@{
-    // If there are Comments, show them.
-    if (Model.Product.CommentList.Count > 0)
-    {
-        <br />
-        <br />
-
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var comment in Model.Product.CommentList)
-                {
-                    <tr>
-                        <td>@comment.Comment</td>
-                        <td><a asp-page="DeleteComment" asp-route-CommentId="@comment.Id" asp-route-ProductId="@Model.Product.Id">Delete</a></td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-}
-
-<br />
-<br />
-
-<div class="row">
-    <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-danger">Delete</a>
-</div>
+    }
