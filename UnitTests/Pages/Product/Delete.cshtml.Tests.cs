@@ -40,7 +40,20 @@ namespace UnitTests.Pages.Product.Delete
         #endregion OnGet
 
         #region OnPost
+        [Test]
+        public void OnPost_Valid_Model_NotValid_Return_Page()
+        {
+            // Arrange
 
+            // Force an valid state
+            pageModel.ModelState.AddModelError("yes", "bogus error");
+
+            // Act
+            var result = pageModel.OnPost() as ActionResult;
+
+            // Assert
+            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+        }
 
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()

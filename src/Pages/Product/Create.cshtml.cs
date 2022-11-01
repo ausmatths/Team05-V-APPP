@@ -13,13 +13,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
         public ProductModel product { get; private set; }
 
-        public CreateModel(ILogger<CreateModel> logger,
-            JsonFileProductService productService)
-        {
-            _logger = logger;
-            ProductService = productService;
-
-        }
+     
 
         public CreateModel(JsonFileProductService productService)
         {
