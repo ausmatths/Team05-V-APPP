@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -182,5 +183,9 @@ namespace ContosoCrafts.WebSite.Services
             return data;
         }
 
+        public ProductModel CreateData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

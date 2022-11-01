@@ -1,24 +1,21 @@
 using System.Linq;
 
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
 using NUnit.Framework;
 
 using ContosoCrafts.WebSite.Pages.Product;
 
-namespace UnitTests.Pages.Product.Index
+
+namespace UnitTests.Pages.Product.Create
 {
-    public class IndexTests
+    public class CreateTests
     {
         #region TestSetup
-        public static PageContext pageContext;
-
-        public static IndexModel pageModel;
+        public static CreateModel pageModel;
 
         [SetUp]
         public void TestInitialize()
         {
-            pageModel = new IndexModel(TestHelper.ProductService)
+            pageModel = new CreateModel(TestHelper.ProductService)
             {
             };
         }
@@ -30,13 +27,14 @@ namespace UnitTests.Pages.Product.Index
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
+            var oldCount = TestHelper.ProductService.GetAllData().Count();
 
             // Act
             pageModel.OnGet();
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(true, pageModel.Products.ToList().Any());
+            Assert.AreEqual(oldCount + 0, TestHelper.ProductService.GetAllData().Count());
         }
         #endregion OnGet
     }

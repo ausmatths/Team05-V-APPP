@@ -21,6 +21,11 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
         }
 
+        public CreateModel(JsonFileProductService productService)
+        {
+            ProductService = productService;
+        }
+
         public IActionResult OnPost(ProductModel product)
         {
             ProductService.CreateData(product);
