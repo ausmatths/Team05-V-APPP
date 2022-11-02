@@ -8,7 +8,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
-    
+    /// <summary>
+    /// Update Page will let the user update the existing data
+    /// </summary>
     public class UpdateModel : PageModel
     {
         
@@ -33,7 +35,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
         }
 
-        
+        // Posts the data in product and redirects to product index page
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
