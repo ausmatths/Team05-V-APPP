@@ -10,7 +10,9 @@ namespace ContosoCrafts.WebSite.Pages.Product
 {
     public class ReadModel : PageModel
     {
-        
+        /// <summary>
+        /// Read page will show the product info 
+        /// </summary>
         public JsonFileProductService ProductService { get; }
 
         
