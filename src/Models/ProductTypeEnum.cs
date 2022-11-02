@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Type of the product in mock database i.e. products.json file
+    /// </summary>
     public enum ProductTypeEnum
     {
         Undefined = 0,
@@ -14,6 +17,7 @@ namespace ContosoCrafts.WebSite.Models
         Commercial = 1,
     }
 
+    // Selects and shows the type of product
     public static class ProductTypeEnumExtensions
     {
         public static string DisplayName(this ProductTypeEnum data)
