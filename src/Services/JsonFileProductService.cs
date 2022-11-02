@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
+    /// <summary>
+    /// This class contains all the services related to operations/services on a product 
+    /// </summary>
     public class JsonFileProductService
     {
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
