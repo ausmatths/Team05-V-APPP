@@ -80,7 +80,9 @@
     "Url": "https://www.vw.com/es/models/golf-gti.html",
     "Title": "Volkswagen Golf GTI",
     "Description": "The Volkswagen Golf GTI pioneered the hot-hatchback genre and now with more modern interior features, but it still possesses the fun-to-drive nature that makes it a performance icon. A turbocharged, 2.0-liter, 241-hp four-cylinder .",
-    "Ratings": null,
+    "Ratings": [
+      4
+    ],
     "ProductType": 1,
     "Quantity": null,
     "Price": 43,
