@@ -8,15 +8,13 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
-    /// <summary>
     /// Update Page will let the user update the existing data
-    /// </summary>
+    
     public class UpdateModel : PageModel
     {
         
         public JsonFileProductService ProductService { get; }
-
-        
+    
         /// <param name="logger"></param>
         /// <param name="productService"></param>
         public UpdateModel(JsonFileProductService productService)
@@ -27,7 +25,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         // The data to show, bind to it for the post
         [BindProperty]
         public ProductModel Product { get; set; }
-
        
         /// <param name="id"></param>
         public void OnGet(string id)

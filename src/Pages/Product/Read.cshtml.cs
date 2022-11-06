@@ -2,19 +2,16 @@
 
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
-
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
     public class ReadModel : PageModel
-    {
-        /// <summary>
+    {  
         /// Read page will show the product info 
-        /// </summary>
+        
         public JsonFileProductService ProductService { get; }
-
         
         /// <param name="logger"></param>
         /// <param name="productService"></param>
@@ -25,8 +22,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
         public ProductModel Product;
 
-       
-        /// <param name="id"></param>
+          /// <param name="id"></param>
         public IActionResult OnGet(string id)
         {
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));

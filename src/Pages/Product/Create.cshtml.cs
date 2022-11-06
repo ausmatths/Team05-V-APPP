@@ -3,12 +3,10 @@ using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-
 namespace ContosoCrafts.WebSite.Pages.Product
 {
-    /// <summary>
     /// Implementing create for creating a new product
-    /// </summary>
+    
     public class CreateModel : PageModel
     {
         private readonly ILogger<CreateModel> _logger;
@@ -16,7 +14,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
         public ProductModel product { get; private set; }
 
-        
         // Linking to ProductService
         public CreateModel(JsonFileProductService productService)
         {
@@ -29,7 +26,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService.CreateData(product);
             return RedirectToPage("./Index");
         }
-
         public void OnGet()
         {
         }
