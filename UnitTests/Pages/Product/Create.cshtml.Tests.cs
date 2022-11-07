@@ -7,12 +7,16 @@ using ContosoCrafts.WebSite.Pages.Product;
 
 namespace UnitTests.Pages.Product.Create
 {
+    /// <summary>
+    /// Tests create page functinality
+    /// </summary>
     public class CreateTests
     {
         #region TestSetup
         public static CreateModel pageModel;
 
         [SetUp]
+        // Initialize CreateModel
         public void TestInitialize()
         {
             pageModel = new CreateModel(TestHelper.ProductService)
@@ -24,6 +28,7 @@ namespace UnitTests.Pages.Product.Create
 
         #region OnGet
         [Test]
+        // OnGet should return products if model valid
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
