@@ -27,6 +27,54 @@ namespace UnitTests.Pages.Product.AddRating
 
         #endregion TestSetup
 
+        #region DeleteData
+        /// <summary>
+        /// Tests DeleteData function, should return valid product
+        /// </summary>
+        [Test]
+        public void DeleteData_Valid_Product_Should_Return_Product()
+        {
+          
+        }
+
+        #endregion DeleteData
+
+        #region UpdateData
+        /// <summary>
+        /// Tests UpdateData function, should return valid product
+        /// </summary>
+        [Test]
+        public void UpdateData_Valid_Product_Should_Return_Product()
+        {
+            // Arrange
+            var data = TestHelper.ProductService.GetAllData().First();
+
+            // Act
+            var result = TestHelper.ProductService.UpdateData(data);
+
+
+            // Assert
+            Assert.AreEqual(data.Title, result.Title);
+            Assert.AreEqual(data.Description, result.Description);
+            Assert.AreEqual(data.Url, result.Url);
+            Assert.AreEqual(data.Image, result.Image);
+        }
+
+        [Test]
+        // If invalid null product is added, UpdateData should return null
+        public void UpdateData_InValid_Product_Null_Should_Return_Null()
+        {
+            // Arrange
+            // var data = TestHelper.ProductService.GetAllData().First();
+
+            // Act
+            //var result = TestHelper.ProductService.UpdateData(null);
+
+            // Assert
+            //Assert.IsNull(result);
+        }
+        #endregion UpdateData
+
         #region CreateData
         /// <summary>
         /// Tests createData function, should return valid product
