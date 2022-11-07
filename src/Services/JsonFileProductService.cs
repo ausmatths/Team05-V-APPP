@@ -189,10 +189,5 @@ namespace ContosoCrafts.WebSite.Services
 
             return data;
         }
-
-        public ProductModel CreateData()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
