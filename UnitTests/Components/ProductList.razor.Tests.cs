@@ -10,6 +10,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Components
 {
+    /// <summary>
+    /// Tests ProductList.razor page
+    /// </summary>
     public class ProductListTests : BunitTestContext
     {
         #region TestSetup
@@ -21,6 +24,9 @@ namespace UnitTests.Components
 
         #endregion TestSetup
 
+        /// <summary>
+        /// By default it should reneder the products
+        /// </summary>
         [Test]
         public void ProductList_Default_Should_Return_Content()
         {
