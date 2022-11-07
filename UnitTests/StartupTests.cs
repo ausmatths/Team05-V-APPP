@@ -5,6 +5,9 @@ using NUnit.Framework;
 
 namespace UnitTests.Pages.Startup
 {
+    /// <summary>
+    ///  Startup class for ConfigureServices and Configure methods tests
+    /// </summary>
     public class StartupTests
     {
         #region TestSetup
