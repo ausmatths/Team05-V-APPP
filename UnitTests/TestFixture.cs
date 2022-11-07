@@ -4,6 +4,9 @@ using NUnit.Framework;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// This class sets up a teardown method
+    /// </summary>
     [SetUpFixture]
     public class TestFixture
     {
