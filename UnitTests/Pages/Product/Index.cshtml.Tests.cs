@@ -8,6 +8,9 @@ using ContosoCrafts.WebSite.Pages.Product;
 
 namespace UnitTests.Pages.Product.Index
 {
+    /// <summary>
+    /// Tests Index page functionality
+    /// </summary>
     public class IndexTests
     {
         #region TestSetup
@@ -16,6 +19,7 @@ namespace UnitTests.Pages.Product.Index
         public static IndexModel pageModel;
 
         [SetUp]
+        // Initialize IndexModel
         public void TestInitialize()
         {
             pageModel = new IndexModel(TestHelper.ProductService)
@@ -27,6 +31,7 @@ namespace UnitTests.Pages.Product.Index
 
         #region OnGet
         [Test]
+        // OnGet should return products if valid
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
