@@ -34,7 +34,24 @@ namespace UnitTests.Pages.Product.AddRating
         [Test]
         public void DeleteData_Valid_Product_Should_Return_Product()
         {
-          
+            // Arrange
+            var data = new ProductModel()
+            {
+                Title = "Test Volvo",
+                Description = "Test Description",
+                Url = "Test Url",
+                Image = "Test Image",
+            };
+
+            // Act
+            TestHelper.ProductService.CreateData(data);
+            TestHelper.ProductService.DeleteData(data.Id);
+            var result = TestHelper.ProductService.GetAllData().Last();
+            //var result3 = TestHelper.ProductService.Get;
+
+
+            // Assert
+            Assert.AreNotEqual(data.Id, result.Id);
         }
 
         #endregion DeleteData
@@ -73,6 +90,7 @@ namespace UnitTests.Pages.Product.AddRating
             // Assert
             Assert.IsNull(result);
         }
+
         #endregion UpdateData
 
         #region CreateData
