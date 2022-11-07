@@ -91,6 +91,29 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.IsNull(result);
         }
 
+        [Test]
+        // If invalid null product is added inside update function, UpdateData should return null
+        public void UpdateData_InValid_Product_Inside_UpdateData_Null_Should_Return_Null()
+        {
+            // Arrange
+            var data = new ProductModel()
+            {
+                Title = "Test Volvo",
+                Description = "Test Description",
+                Url = "Test Url",
+                Image = "Test Image",
+            };
+
+            // Act
+            var result = TestHelper.ProductService.CreateData(data);
+            result.Id = null;
+            var result1 = TestHelper.ProductService.UpdateData(result);
+            
+
+            // Assert
+            Assert.IsNull(true, result.Id);
+        }
+
         #endregion UpdateData
 
         #region CreateData
