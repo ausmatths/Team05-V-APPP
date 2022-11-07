@@ -162,6 +162,7 @@ namespace ContosoCrafts.WebSite.Services
                 Description = product.Description,
                 Url = product.Url,
                 Image = product.Image,
+                CommentList = product.CommentList,
             };
 
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
