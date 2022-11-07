@@ -11,6 +11,9 @@ using System;
 
 namespace UnitTests.Pages.Product.AddRating
 {
+    /// <summary>
+    /// This class tests CRUDi methods and checks if the results are as expected
+    /// </summary>
     public class JsonFileProductServiceTests
     {
         #region TestSetup
