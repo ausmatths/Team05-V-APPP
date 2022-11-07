@@ -10,12 +10,16 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Error
 {
+    /// <summary>
+    /// Tests error page 
+    /// </summary>
     public class ErrorTests
     {
         #region TestSetup
         public static ErrorModel pageModel;
 
         [SetUp]
+        // Initialise initial state
         public void TestInitialize()
         {
             var MockLoggerDirect = Mock.Of<ILogger<ErrorModel>>();
@@ -31,6 +35,7 @@ namespace UnitTests.Pages.Error
 
         #region OnGet
         [Test]
+        // OnGet should return requaest id on valid activity 
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
             // Arrange
@@ -50,6 +55,7 @@ namespace UnitTests.Pages.Error
         }
 
         [Test]
+        // OnGet should return TraceIdentifier on Invalid activity/ null
         public void OnGet_InValid_Activity_Null_Should_Return_TraceIdentifier()
         {
             // Arrange
