@@ -8,12 +8,16 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Privacy
 {
+    /// <summary>
+    /// Tests Privacy page
+    /// </summary>
     public class PrivacyTests
     {
         #region TestSetup
         public static PrivacyModel pageModel;
 
         [SetUp]
+        // Initialises the initial state
         public void TestInitialize()
         {
             var MockLoggerDirect = Mock.Of<ILogger<PrivacyModel>>();
