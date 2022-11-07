@@ -12,7 +12,7 @@ using System.Collections.Generic;
 namespace UnitTests.Models.Comment
 {
     /// <summary>
-    /// Tests index page
+    /// Tests CommentModel page
     /// </summary>
     public class CommentModelTests
     {
@@ -28,10 +28,10 @@ namespace UnitTests.Models.Comment
 
         #region Comment
         /// <summary>
-        /// Tests createData function, should return valid product
+        /// Tests Comment function, should return valid comment
         /// </summary>
         [Test]
-        public void Comment_Get_Product_Should_Return_Product()
+        public void Comment_Get_Should_Return_Product_Comment()
         {
             // Arrange
             var data = new ProductModel()
