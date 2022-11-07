@@ -7,6 +7,9 @@ using ContosoCrafts.WebSite.Pages.Product;
 
 namespace UnitTests.Pages.Product.Read
 {
+    /// <summary>
+    /// Tests read page functionality
+    /// </summary>
     public class ReadTests
     {
         #region TestSetup
@@ -24,6 +27,7 @@ namespace UnitTests.Pages.Product.Read
 
         #region OnGet
         [Test]
+        // OnGet should return products if valid
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -37,6 +41,7 @@ namespace UnitTests.Pages.Product.Read
         }
 
         [Test]
+        // OnGet should return index page if invalid
         public void OnGet_InValid_Id_Bougs_Should_Return_Products()
         {
             // Arrange
