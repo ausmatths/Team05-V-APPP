@@ -8,12 +8,16 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Product.Update
 {
+    /// <summary>
+    /// Tests update page functionality
+    /// </summary>
     public class UpdateTests
     {
         #region TestSetup
         public static UpdateModel pageModel;
 
         [SetUp]
+        // Initialize UpdateModel
         public void TestInitialize()
         {
             pageModel = new UpdateModel(TestHelper.ProductService)
@@ -25,6 +29,7 @@ namespace UnitTests.Pages.Product.Update
 
         #region OnGet
         [Test]
+        // OnGet should return Products
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -40,6 +45,7 @@ namespace UnitTests.Pages.Product.Update
 
         #region OnPost
         [Test]
+        // OnPost shoould update products
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
@@ -61,6 +67,7 @@ namespace UnitTests.Pages.Product.Update
         }
 
         [Test]
+        // OnPost should return false if pageModel is invalid 
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
             // Arrange
