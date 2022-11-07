@@ -102,6 +102,10 @@ namespace ContosoCrafts.WebSite.Services
         /// <param name="data"></param>
         public ProductModel UpdateData(ProductModel data)
         {
+            if (data == null)
+            {
+                return null;
+            }
             var products = GetAllData();
             var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
             if (productData == null)

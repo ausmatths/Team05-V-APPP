@@ -68,10 +68,10 @@ namespace UnitTests.Pages.Product.AddRating
             // var data = TestHelper.ProductService.GetAllData().First();
 
             // Act
-            //var result = TestHelper.ProductService.UpdateData(null);
+            var result = TestHelper.ProductService.UpdateData(null);
 
             // Assert
-            //Assert.IsNull(result);
+            Assert.IsNull(result);
         }
         #endregion UpdateData
 
