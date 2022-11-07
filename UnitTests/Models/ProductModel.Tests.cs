@@ -13,16 +13,14 @@ using System.Text.Json;
 namespace UnitTests.Models.Product
 {
     /// <summary>
-    /// Tests index page
+    /// Tests ProductModel page
     /// </summary>
     public class ProductModelTests
     {
         #region TestSetup
-
         public static ProductModel pageModel;
 
         [SetUp]
-        // Initialize Comment page state
         public void TestInitialize()
         {
         }
@@ -30,7 +28,9 @@ namespace UnitTests.Models.Product
         #endregion TestSetup
 
         #region ProductModelSetup
-
+        /// <summary>
+        /// Tests override toString() method in ProductModel page, should return string
+        /// </summary>
         [Test]
         public void Product_String_Should_Return_Product()
         {
