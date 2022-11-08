@@ -111,7 +111,7 @@ namespace UnitTests.Pages.Product.AddRating
             
 
             // Assert
-            Assert.IsNull(true, result.Id);
+            Assert.IsNull(null, result.Id);
         }
 
         #endregion UpdateData
