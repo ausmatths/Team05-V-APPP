@@ -1,25 +1,5 @@
 [
   {
-    "Id": "Genesis G70",
-    "Maker": "@jenlooper",
-    "img": "https://content-images.carmax.com/qeontfmijmzv/7gCkpvrC5Hlihm9SQzt6TO/83c8794ab769b105425302d6585f38bc/2021_Genesis_G70_EVOX.jpg?fm=webp",
-    "Url": "https://www.genesis.com/us/en/2023/genesis-g70.html?\u0026chid=sem\u0026fb=g70_bnd_gusa\u0026CID=10955965\u0026PID=146202853\u0026CRID=0\u0026SID=3265056\u0026AID=317767215\u0026ds_query=genesis\u002Bg70\u0026gclid=Cj0KCQjw4omaBhDqARIsADXULuXzEVnhSzpMhlmvzkKq_2PA7VSKlcW8s-8zTbti8EF3YSZyuwN5ErwaAo4JEALw_wcB\u0026gclsrc=aw.ds",
-    "Title": "Bentley Continental GT",
-    "Description": "The Continental GT is built for effortless acceleration and a truly thrilling drive. Choose from two powerful, twin-turbocharged petrol engines: a 4.0 litre V8.",
-    "Ratings": [
-      5,
-      5,
-      3,
-      2,
-      1,
-      5
-    ],
-    "ProductType": 55,
-    "Quantity": null,
-    "Price": 35,
-    "CommentList": []
-  },
-  {
     "Id": "Jeep_Grand_Cherokee",
     "Maker": "@jenlooper",
     "img": "https://content-images.carmax.com/qeontfmijmzv/13Wq5gCtKJNiSDN6FE6fMy/67c482468fc9e16bd9d1d036c639410d/04-2021_Jeep_Grand_Cherokee__EVOX.jpg?fm=webp",
