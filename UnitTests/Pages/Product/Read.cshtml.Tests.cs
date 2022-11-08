@@ -7,9 +7,6 @@ using ContosoCrafts.WebSite.Pages.Product;
 
 namespace UnitTests.Pages.Product.Read
 {
-    /// <summary>
-    /// Tests read page functionality
-    /// </summary>
     public class ReadTests
     {
         #region TestSetup
@@ -27,21 +24,19 @@ namespace UnitTests.Pages.Product.Read
 
         #region OnGet
         [Test]
-        // OnGet should return products if valid
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
 
             // Act
-            pageModel.OnGet("Genesis G70");
+            pageModel.OnGet("Jeep_Grand_Cherokee");
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual("Bentley Continental GT", pageModel.Product.Title);
+            Assert.AreEqual("Jeep Cherokee", pageModel.Product.Title);
         }
 
         [Test]
-        // OnGet should return index page if invalid
         public void OnGet_InValid_Id_Bougs_Should_Return_Products()
         {
             // Arrange
