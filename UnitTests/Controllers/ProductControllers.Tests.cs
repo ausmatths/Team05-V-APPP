@@ -1,60 +1,91 @@
-using System.Linq;
-
-using Microsoft.Extensions.Logging;
-
-using Moq;
-
-using NUnit.Framework;
-
+using ContosoCrafts.WebSite.Controllers;
 using ContosoCrafts.WebSite.Models;
+using Microsoft.AspNetCore.Mvc;
+using NUnit.Framework;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static ContosoCrafts.WebSite.Controllers.ProductsController;
 
-namespace UnitTests.Models.Comment
+namespace UnitTests.Controllers
 {
+
     /// <summary>
-    /// Tests CommentModel page
+    /// Class containing unit test cases to ProductController
     /// </summary>
-    public class CommentModelTests
+    public class ProductsControllerTests
     {
+
+        //Creating and instance
+        public static ProductsController testProductController;
+
+        /// <summary>
+        /// Test initialize
+        /// </summary>
         #region TestSetup
 
         [SetUp]
-        // Initialize Comment page state
-        public void TestInitialize()
+        public void Testinitialize()
         {
+            testProductController = new ProductsController(TestHelper.ProductService);
         }
 
-        #endregion TestSetup
+        #endregion
 
-        #region Comment
         /// <summary>
-        /// Tests Comment function, should return valid comment
+        /// Testing if get is valid should return products
         /// </summary>
         [Test]
-        public void Comment_Get_Should_Return_Product_Comment()
+        public void Get_Valid_Should_Return_List_Of_Products()
         {
-            // Arrange
-            var data = new ProductModel()
-            {
-                Title = "Test Volvo",
-                Description = "Test Description",
-                Url = "Test Url",
-                Image = "Test Image",
-                CommentList = new List<CommentModel>()
-            };
-            var commentModel = new CommentModel();
-            commentModel.Comment = "Comment here";
-            data.CommentList.Add(commentModel);
-            // Act
-            var r = TestHelper.ProductService.CreateData(data);
-            var result = TestHelper.ProductService.GetAllData().First(x=>x.Id.Equals(r.Id));
+            //Arrange
+            var data = testProductController.Get().ToList();
 
-            // Assert
-            Assert.AreEqual(data.CommentList.Count, result.CommentList.Count);
-            Assert.AreEqual(data.CommentList.First().Comment, result.CommentList.First().Comment);
-            Assert.AreEqual(r.CommentList.First().Id, result.CommentList.First().Id);
+            //Act
+
+            //Assert
+            Assert.AreEqual(typeof(List<ProductModel>), data.GetType());
         }
 
-        #endregion Comment
+        /// <summary>
+        /// Testing get valid tostring should return string
+        /// </summary>
+        [Test]
+        public void Get_Valid_ToString_Should_Return_String()
+        {
+            //Arrange
+            var data = testProductController.Get().FirstOrDefault().ToString();
+
+            //Act
+
+            //Assert
+            Assert.AreEqual(typeof(string), data.GetType());
+        }
+
+        /// <summary>
+        /// Testing patch valid shouls return ok
+        /// </summary>
+        [Test]
+        public void Patch_Valid_Should_Return_Ok()
+        {
+            //Arrange
+            //A new variable of type RatingRequest
+            var data = new RatingRequest
+            {
+                ProductId = "",
+                Rating = 5
+            };
+
+            //A variable to hold the request
+            var result = testProductController.Patch(data);
+
+            //Act
+            var okResult = result as OkResult;
+
+            //Assert
+            Assert.AreEqual(200, okResult.StatusCode);
+        }
     }
 }
