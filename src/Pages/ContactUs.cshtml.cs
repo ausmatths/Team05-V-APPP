@@ -1,3 +1,4 @@
+using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -17,8 +18,11 @@ namespace ContosoCrafts.WebSite.Pages
 
         public JsonFileProductService ProductService { get; }
 
+        public IEnumerable<ProductModel> Products { get; private set; }
+
         public void OnGet()
         {
+
         }
     }
 }
