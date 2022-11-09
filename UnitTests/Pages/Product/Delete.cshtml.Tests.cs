@@ -52,7 +52,7 @@ namespace UnitTests.Pages.Product.Delete
             // Arrange
 
             // Force an valid state
-            pageModel.ModelState.AddModelError("yes", "bogus error");
+            pageModel.ModelState.AddModelError("no", "bogus error");
 
             // Act
             var result = pageModel.OnPost() as ActionResult;
