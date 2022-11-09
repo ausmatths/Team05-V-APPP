@@ -38,10 +38,9 @@ namespace ContosoCrafts.WebSite.Services
                     });
             }
         }
-
         /// <summary>
         /// Add Rating
-        /// 
+
         /// Take in the product ID and the rating
         /// If the rating does not exist, add it
         /// Save the update
@@ -130,7 +129,7 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
-        /// Save All products data to storage
+        /// Save All products data to storage 
         /// </summary>
         private void SaveData(IEnumerable<ProductModel> products)
         {
@@ -150,7 +149,7 @@ namespace ContosoCrafts.WebSite.Services
 
         /// <summary>
         /// Create a new product using default values
-        /// After create the user can update to set values
+        /// After create the user can update to set values to the exisiting data
         /// </summary>
         /// <returns></returns>
         public ProductModel CreateData(ProductModel product)
@@ -175,7 +174,7 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
-        /// Remove the item from the system
+        /// Remove the item from the system and get the confirmation to remove product
         /// </summary>
         /// <returns></returns>
         public ProductModel DeleteData(string id)
