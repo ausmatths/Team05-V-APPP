@@ -1,8 +1,10 @@
-using ContosoCrafts.WebSite.Models;
-using ContosoCrafts.WebSite.Services;
-using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+
+using ContosoCrafts.WebSite.Models;
+using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -10,7 +12,8 @@ namespace ContosoCrafts.WebSite.Pages
     {
         private readonly ILogger<ContactUsModel> _logger;
 
-        public ContactUsModel(ILogger<ContactUsModel> logger)
+        public ContactUsModel(ILogger<ContactUsModel> logger,
+            JsonFileProductService productService)
         {
             _logger = logger;
             ProductService = productService;
@@ -22,7 +25,7 @@ namespace ContosoCrafts.WebSite.Pages
 
         public void OnGet()
         {
-
+            Products = ProductService.GetAllData();
         }
     }
 }
