@@ -1,3 +1,4 @@
+using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -11,7 +12,10 @@ namespace ContosoCrafts.WebSite.Pages
         public ContactUsModel(ILogger<ContactUsModel> logger)
         {
             _logger = logger;
+            ProductService = productService;
         }
+
+        public JsonFileProductService ProductService { get; }
 
         public void OnGet()
         {
