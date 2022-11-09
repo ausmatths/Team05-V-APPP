@@ -31,5 +31,21 @@ namespace UnitTests.Pages.ContactUs
         }
 
         #endregion TestSetup
+
+        #region OnGet
+        [Test]
+        // OnGet method should return products
+        public void OnGet_Valid_Should_Return_Products()
+        {
+            // Arrange
+
+            // Act
+            pageModel.OnGet();
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, pageModel.Products.ToList().Any());
+        }
+        #endregion OnGet
     }
 }
