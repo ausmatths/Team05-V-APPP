@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Models;
 
-namespace UnitTests.Models
+namespace UnitTests.Models.Product
 {
     /// <summary>
     /// This class tests ProductTypeEnum page in Models
