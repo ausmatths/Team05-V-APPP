@@ -18,7 +18,15 @@
     @{
         var productList = ProductService.GetAllData();
 
-        
+        /*
+
+        Change the grouping sort order to be
+        Order by ProductType
+        Then order by ProductList Alphabetic within the Product data set
+
+        */
+
+        // Group by the Enum
         foreach (ProductTypeEnum productType in Enum.GetValues(typeof(ProductTypeEnum)))
         {
             // Get only the products that are of this enum type
@@ -48,7 +56,6 @@
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">@product.Title</h5>
-                                    <h6 class="card-title">$@product.Price/hr</h6>
                                 </div>
                                 <div class="card-footer">
                                     <small class="text-muted">
@@ -127,7 +134,7 @@
                                         </div>
                                     }
 
-                                    
+                                    // If this is a new comment, then add the Input boxes for it, else show the Add Comment Button
                                     if (NewComment)
                                     {
                                         <div class="row">
@@ -138,7 +145,7 @@
                                         </div>
                                     }
 
-                                    
+                                    // If this is not a new comment, then show the buttons for Adding comment and Close
                                     if (NewComment == false)
                                     {
                                         <div class="row">
@@ -200,62 +207,72 @@
         SelectProduct(selectedProductId);
     }
 
-    
+    // New Comment Flag to show the input box or not
     bool NewComment = false;
 
-    
+    // Next Comment Text is what the comment text is
     string NewCommentText = "";
 
-    
+    /// <summary>
+    /// Enable the New Comment Entry by setting the NewComment flag
+    /// </summary>
     /// <param name="comment"></param>
     void ShowNewCommentInput()
     {
-        
+        // Setting the new Comment flag to true will show the input box
         NewComment = true;
     }
 
-    
+    /// <summary>
+    /// Set the New Comment Text variable to the data just entered in the input box
+    /// </summary>
     /// <param name="newCommentText"></param>
     void UpdateCommentText(string newCommentText)
     {
         NewCommentText = newCommentText;
     }
 
-    
+    /// <summary>
+    /// Add the comment to the product
+    /// Best to refactor this to be a method to call in the Middle Tier Data service, rathern than putting the logic here...
+    /// </summary>
     /// <param name="comment"></param>
     void AddComment()
     {
-        
+        // Refactor to be a call to the middle tier
+        // ProductService.AddCommentToProduct(selectedProduct, comment);
 
 
-        
+        // Add it to the Comment List
         selectedProduct.CommentList.Add(new CommentModel() { Comment = NewCommentText });
 
-        
+        // Call for the Product to be saved
         ProductService.UpdateData(selectedProduct);
 
-        
+        // Set the NewComment flag to false to hide the input box
         NewComment = false;
     }
 
 
     string FilterDataString = "";
-    bool FilterData = false;
+    bool FilterData = true;
 
     void UpdateFilterText(string text)
     {
         FilterDataString = text;
+        FilterData = false;
     }
 
     void EnableFilterData()
     {
-        
+        // If the Filter is enabled, set the filter flag
         FilterData = true;
     }
 
     void ClearFilterData()
     {
-        
+        // If the Filter is enabled, set the filter flag
         FilterData = false;
     }
+
 }

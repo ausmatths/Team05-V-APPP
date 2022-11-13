@@ -6,7 +6,15 @@
     "Url": "https://www.googleadservices.com/pagead/aclk?sa=L\u0026ai=DChcSEwjZr8a199T6AhUqIK0GHd80AfQYABAGGgJwdg\u0026ohost=www.google.com\u0026cid=CAESbOD2tvLtAfihrv7Lmp-_xxARQgr2awRwG9-pEtJ0EIgUHb_tshUZsxK3mrhJumDJ1KGGJFQf_bVI-9Ff_7IbB853qKN2ZkZe_sR_sFQLLUBEI-OiEq_XswYaTmtW7qFX840zvLbmVNGA8D4baQ\u0026sig=AOD64_12xXSlTa-UyRapTlZRDfA_elyfhA\u0026q\u0026adurl\u0026ved=2ahUKEwjH9Li199T6AhUTIX0KHU00DQAQ0Qx6BAgHEAE\u0026nis=2",
     "Title": "Jeep Cherokee",
     "Description": "The 2022 Jeep Grand Cherokee is the most awarded SUV ever. It comes with 3.6-liter V-6 engine and generates 293 horsepower.",
-    "Ratings": null,
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5,
+      3
+    ],
     "ProductType": 5,
     "Quantity": null,
     "Price": 30,
@@ -20,7 +28,16 @@
     "Title": "Lexus IS",
     "Description": "The Lexus IS is the facelift model of 2022 with high specifications and V8 powered engine",
     "Ratings": [
-      4
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
     ],
     "ProductType": 130,
     "Quantity": null,
