@@ -8,11 +8,11 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-    public class Payment : PageModel
+    public class PaymentModel : PageModel
     {
-        private readonly ILogger<ContactUsModel> _logger;
+        private readonly ILogger<PaymentModel> _logger;
 
-        public Payment(ILogger<ContactUsModel> logger,
+        public PaymentModel(ILogger<PaymentModel> logger,
             JsonFileProductService productService)
         {
             _logger = logger;
