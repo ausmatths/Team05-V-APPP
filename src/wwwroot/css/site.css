@@ -147,3 +147,18 @@ ul {
     background: -moz-linear-gradient(110deg, #000000 60%, #FDB813 60%);
     background: linear-gradient(110deg, #000000 60%, #FDB813 60%);
 }
+
+.fa-1x {
+    font-size: 1.5rem;
+}
+
+.navbar-toggler {
+    cursor: pointer;
+}
+.toggler-example {
+    cursor: pointer;
+}
+
+.dark-yellow-text {
+    color: #FDB813;
+}
