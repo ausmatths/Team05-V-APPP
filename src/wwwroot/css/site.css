@@ -148,6 +148,7 @@ ul {
     background: linear-gradient(110deg, #000000 60%, #FDB813 60%);
 }
 
+/*Nav menu*/
 .fa-1x {
     font-size: 1.5rem;
 }
@@ -161,4 +162,13 @@ ul {
 
 .dark-yellow-text {
     color: #FDB813;
+}
+
+.dark-teal-text {
+    color: #008080;
+}
+
+/*Card padding top*/
+.top-buffer {
+    margin-top: 60px;
 }
