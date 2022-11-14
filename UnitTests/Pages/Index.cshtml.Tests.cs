@@ -15,16 +15,7 @@ namespace UnitTests.Pages.Index
     /// </summary>
     public class IndexTests
     {
-        #region TestSetup
+       
 
-        public static IndexModel pageModel;
-
-        [SetUp]
-        // Initialize index page state
-        public void TestInitialize()
-        {
-        }
-
-        #endregion TestSetup
     }
 }
