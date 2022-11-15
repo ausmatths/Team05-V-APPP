@@ -46,19 +46,24 @@ namespace UnitTests.Pages.Product.Delete
 
         #region OnPost
         [Test]
-        // OnGet should return page if model invalid 
-        public void OnPost_Valid_Model_NotValid_Return_Page()
+        public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
-
-            // Force an valid state
-            pageModel.ModelState.AddModelError("no", "bogus error");
+            pageModel.Product = new ProductModel
+            {
+                Id = "Lexus IS 350",
+                Title = "title",
+                Description = "description",
+                Url = "url",
+                Image = "image"
+            };
 
             // Act
-            var result = pageModel.OnPost() as ActionResult;
+            var result = pageModel.OnPost() as RedirectToPageResult;
 
             // Assert
-            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
 
         [Test]
