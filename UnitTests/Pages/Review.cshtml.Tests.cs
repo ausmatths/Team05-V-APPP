@@ -5,24 +5,26 @@ using NUnit.Framework;
 using Moq;
 
 using ContosoCrafts.WebSite.Pages;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace UnitTests.Pages.Privacy
+namespace UnitTests.Pages.Review
+
 {
     /// <summary>
-    /// Tests Privacy page
+    /// Tests Review page
     /// </summary>
-    public class PrivacyTests
+    public class ReviewTests
     {
         #region TestSetup
-        public static PrivacyModel pageModel;
+        public static ReviewModel pageModel;
 
         [SetUp]
         // Initialises the initial state
         public void TestInitialize()
         {
-            var MockLoggerDirect = Mock.Of<ILogger<PrivacyModel>>();
+            var MockLoggerDirect = Mock.Of<ILogger<ReviewModel>>();
 
-            pageModel = new PrivacyModel(MockLoggerDirect)
+            pageModel = new ReviewModel(MockLoggerDirect)
             {
                 PageContext = TestHelper.PageContext,
                 TempData = TestHelper.TempData,
