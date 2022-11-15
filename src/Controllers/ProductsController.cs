@@ -11,10 +11,6 @@ namespace ContosoCrafts.WebSite.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
-        public ProductsController()
-        {
-        }
-
         public ProductsController(JsonFileProductService productService)
         {
             ProductService = productService;
@@ -32,13 +28,13 @@ namespace ContosoCrafts.WebSite.Controllers
         public ActionResult Patch([FromBody] RatingRequest request)
         {
             ProductService.AddRating(request.ProductId, request.Rating);
-            
+
             return Ok();
         }
 
         public class RatingRequest
         {
-            public string ProductId { get; set; }
+            public string ProductId { get; set; } = System.Guid.NewGuid().ToString();
             public int Rating { get; set; }
         }
     }
