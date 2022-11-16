@@ -19,7 +19,7 @@ namespace UnitTests.Pages.Payment
         public static PaymentModel pageModel;
 
         [SetUp]
-        // Initialises the initial state
+        /// Initialises the initial state
         public void TestInitialize()
         {
             var MockLoggerDirect = Mock.Of<ILogger<PaymentModel>>();
@@ -37,14 +37,14 @@ namespace UnitTests.Pages.Payment
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
-            // Arrange
+            /// Arrange
 
-            // Act
+            /// Act
             pageModel.OnGet();
 
-            // Reset
+            /// Reset
 
-            // Assert
+            /// Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
         }
 
