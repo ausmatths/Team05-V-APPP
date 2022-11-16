@@ -1,10 +1,5 @@
-using System.Collections.Generic;
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-
-using ContosoCrafts.WebSite.Models;
-using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages
 {
@@ -12,20 +7,13 @@ namespace ContosoCrafts.WebSite.Pages
     {
         private readonly ILogger<PaymentModel> _logger;
 
-        public PaymentModel(ILogger<PaymentModel> logger,
-            JsonFileProductService productService)
+        public PaymentModel(ILogger<PaymentModel> logger)
         {
             _logger = logger;
-            ProductService = productService;
         }
-
-        public JsonFileProductService ProductService { get; }
-
-        public IEnumerable<ProductModel> Products { get; private set; }
 
         public void OnGet()
         {
-            Products = ProductService.GetAllData();
         }
     }
 }
