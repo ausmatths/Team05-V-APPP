@@ -8,8 +8,10 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
-    /// Update Page will let the user update the existing data
-    
+    /// <summary>
+    ///  Update Page will let the user update the existing data
+    /// </summary>
+
     public class UpdateModel : PageModel
     {
         
