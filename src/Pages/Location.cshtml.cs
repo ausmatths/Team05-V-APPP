@@ -12,6 +12,10 @@ namespace ContosoCrafts.WebSite.Pages
     {
         private readonly ILogger<LocationModel> _logger;
 
+        public LocationModel(ILogger<LocationModel> mockLoggerDirect)
+        {
+        }
+
         public LocationModel(ILogger<LocationModel> logger,
             JsonFileProductService productService)
         {
