@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+    /// <summary>
     /// Implementing create for creating a new product
-    
+    /// </summary>
+
     public class CreateModel : PageModel
     {
         private readonly ILogger<CreateModel> _logger;
