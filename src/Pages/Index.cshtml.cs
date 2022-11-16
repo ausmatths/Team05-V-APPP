@@ -9,7 +9,7 @@ using ContosoCrafts.WebSite.Services;
 namespace ContosoCrafts.WebSite.Pages
 {
     /// <summary>
-    /// pranavi taneti
+    /// Index page
     /// </summary>
     public class IndexModel : PageModel
     {
