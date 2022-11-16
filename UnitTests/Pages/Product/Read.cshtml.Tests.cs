@@ -7,6 +7,9 @@ using ContosoCrafts.WebSite.Pages.Product;
 
 namespace UnitTests.Pages.Product.Read
 {
+    /// <summary>
+    /// Testing for read pages
+    /// </summary>
     public class ReadTests
     {
         #region TestSetup
