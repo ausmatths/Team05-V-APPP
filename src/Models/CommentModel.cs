@@ -1,4 +1,3 @@
-
 namespace ContosoCrafts.WebSite.Models
 {
     /// <summary>
@@ -6,10 +5,14 @@ namespace ContosoCrafts.WebSite.Models
     /// </summary>
     public class CommentModel
     {
-        // The ID for this comment, use a Guid so it is always unique
+        /// <summary>
+        /// The ID for this comment, use a Guid so it is always unique
+        /// </summary>
         public string Id { get; set; } = System.Guid.NewGuid().ToString();
 
-        // The Comment
+        /// <summary>
+        /// The Comment getter setter
+        /// </summary>
         public string Comment { get; set; }
     }
 }
