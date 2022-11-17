@@ -1,13 +1,4 @@
-﻿.checked {
-  color: orange;
-}
-
-.fa-star {
-  cursor: pointer;
-}
-
-/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/* Card styling*/
 .card-columns .card:hover .card-img {
     opacity: 1;
     -webkit-transform-style: preserve-3d;
@@ -22,18 +13,18 @@ for details on configuring this project to bundle and minify static web assets. 
 .card-columns .card-img {
   height: 260px;
   vertical-align: bottom;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: contain; /* Resize the background image to cover the entire container */
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: contain; 
   opacity: .8;
 }
 
 .modal .card-img {
   height: 260px;
   vertical-align: bottom;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card-columns .card:hover {
@@ -44,6 +35,7 @@ for details on configuring this project to bundle and minify static web assets. 
     background: #fbfafd;
 }
 
+/* Navbar styling*/
 .navbar img {
     height: 110px;
     width: 150px;
@@ -56,6 +48,48 @@ a.navbar-brand {
     text-align: center;
     word-break: break-all;
 }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.bg-navbar {
+    background: -webkit-linear-gradient(110deg, #FDB813 60%, #000000 60%);
+    background: -o-linear-gradient(110deg, #FDB813 60%, #000000 60%);
+    background: -moz-linear-gradient(110deg, #FDB813 60%, #000000 60%);
+    background: linear-gradient(110deg, #FDB813 60%, #000000 60%);
+}
+
+.bg-footer {
+    background: -webkit-linear-gradient(110deg, #000000 60%, #FDB813 60%);
+    background: -o-linear-gradient(110deg, #000000 60%, #FDB813 60%);
+    background: -moz-linear-gradient(110deg, #000000 60%, #FDB813 60%);
+    background: linear-gradient(110deg, #000000 60%, #FDB813 60%);
+}
+
+/*Nav menu*/
+.fa-1x {
+    font-size: 1.5rem;
+}
+
+.navbar-toggler {
+    cursor: pointer;
+}
+
+.toggler-example {
+    cursor: pointer;
+}
+
+.checked {
+    color: orange;
+}
+
+.fa-star {
+    cursor: pointer;
+}
+
 
 /* Provide sufficient contrast against white background */
 a {
@@ -73,14 +107,7 @@ a {
     border-color: #e9a8a6;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
+/* Sticky footer styles */
 html {
   font-size: 14px;
 }
@@ -106,15 +133,13 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+/* Sticky footer styles */
 html {
   position: relative;
   min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
 p {
@@ -131,35 +156,11 @@ ul {
     bottom: 0;
     width: 100%;
     white-space: nowrap;
-    line-height: 60px; /* Vertically center the text there */
+    line-height: 60px; 
     font-family: 'fantasy';
 }
-/*Backgrounds*/
-.bg-navbar {
-    background: -webkit-linear-gradient(110deg, #FDB813 60%, #000000 60%);
-    background: -o-linear-gradient(110deg, #FDB813 60%, #000000 60%);
-    background: -moz-linear-gradient(110deg, #FDB813 60%, #000000 60%);
-    background: linear-gradient(110deg, #FDB813 60%, #000000 60%);
-}
-.bg-footer {
-    background: -webkit-linear-gradient(110deg, #000000 60%, #FDB813 60%);
-    background: -o-linear-gradient(110deg, #000000 60%, #FDB813 60%);
-    background: -moz-linear-gradient(110deg, #000000 60%, #FDB813 60%);
-    background: linear-gradient(110deg, #000000 60%, #FDB813 60%);
-}
 
-/*Nav menu*/
-.fa-1x {
-    font-size: 1.5rem;
-}
-
-.navbar-toggler {
-    cursor: pointer;
-}
-.toggler-example {
-    cursor: pointer;
-}
-
+/* custom color option*/
 .dark-yellow-text {
     color: #FDB813;
 }
@@ -173,6 +174,7 @@ ul {
     margin-top: 15px;
 }
 
+/*image size*/
 .img-fluid {
     width: 600px;
     height: 300px;
