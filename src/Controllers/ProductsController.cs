@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-
 using Microsoft.AspNetCore.Mvc;
-
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
@@ -14,11 +12,18 @@ namespace ContosoCrafts.WebSite.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
+        /// <summary>
+        /// Constructor for ProductsController
+        /// </summary>
+        /// <param name="productService"></param>
         public ProductsController(JsonFileProductService productService)
         {
             ProductService = productService;
         }
 
+        /// <summary>
+        /// getter for JsonFileProductService 
+        /// </summary>
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
@@ -50,7 +55,14 @@ namespace ContosoCrafts.WebSite.Controllers
         /// </summary>
         public class RatingRequest
         {
+            /// <summary>
+            /// Getter setter for ProductId
+            /// </summary>
             public string ProductId { get; set; } = System.Guid.NewGuid().ToString();
+
+            /// <summary>
+            /// Getter setter for rating
+            /// </summary>
             public int Rating { get; set; }
         }
     }
