@@ -3,18 +3,14 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 
-
 <div class="container-fluid">
     @{
-        var productList = ProductService.GetAllData();
-
         /*
-         * 
         Change the grouping sort order to be
         Order by ProductType
         Then order by ProductList Alphabetic within the Product data set
-
         */
+        var productList = ProductService.GetAllData();
 
         // Group by the Enum
         foreach (ProductTypeEnum productType in Enum.GetValues(typeof(ProductTypeEnum)))
@@ -26,11 +22,8 @@
             productListGroup = productListGroup.OrderBy(m => m.Title);
 
             // If filter is enabled, reduce the data set to the filter string
-          
-
             if (productListGroup.Any())
             {
-
                 <hr />
                 <h2>@productType.DisplayName()</h2>
 
@@ -128,8 +121,11 @@
         GetCurrentRating();
     }
 
+    // current rating variable
     int currentRating = 0;
+    // vote count variable
     int voteCount = 0;
+    // vote label variable
     string voteLabel;
 
     void GetCurrentRating()
