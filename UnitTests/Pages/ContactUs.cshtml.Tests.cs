@@ -1,11 +1,7 @@
 using System.Linq;
-
 using Microsoft.Extensions.Logging;
-
 using Moq;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.ContactUs
@@ -17,10 +13,13 @@ namespace UnitTests.Pages.ContactUs
     {
         #region TestSetup
 
+        // variable for ContactUsModel pageModel
         public static ContactUsModel pageModel;
 
+        /// <summary>
+        /// Initialize ContactUs page state
+        /// </summary>
         [SetUp]
-        // Initialize ContactUs page state
         public void TestInitialize()
         {
             var MockLoggerDirect = Mock.Of<ILogger<ContactUsModel>>();
@@ -33,8 +32,11 @@ namespace UnitTests.Pages.ContactUs
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// OnGet method should return products
+        /// </summary>
         [Test]
-        // OnGet method should return products
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
