@@ -1,11 +1,7 @@
 using Microsoft.Extensions.Logging;
-
 using NUnit.Framework;
-
 using Moq;
-
 using ContosoCrafts.WebSite.Pages;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace UnitTests.Pages.Review
 
@@ -18,10 +14,13 @@ namespace UnitTests.Pages.Review
         #region TestSetup
         public static ReviewModel pageModel;
 
+        /// <summary>
+        /// Initialises the initial state
+        /// </summary>
         [SetUp]
-        // Initialises the initial state
         public void TestInitialize()
         {
+            // Variable for mocklogger
             var MockLoggerDirect = Mock.Of<ILogger<ReviewModel>>();
 
             pageModel = new ReviewModel(MockLoggerDirect)
@@ -34,6 +33,10 @@ namespace UnitTests.Pages.Review
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// OnGet if valid activity set should return requestId
+        /// </summary>
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
