@@ -17,9 +17,16 @@ namespace ContosoCrafts.WebSite.Models
         Commercial = 1,
     }
 
-    // Selects and shows the type of product
+    /// <summary>
+    /// Selects and shows the type of product
+    /// </summary>
     public static class ProductTypeEnumExtensions
     {
+        /// <summary>
+        /// Assigns the name value to enums
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public static string DisplayName(this ProductTypeEnum data)
         {
             return data switch
