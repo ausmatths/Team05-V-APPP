@@ -20,7 +20,7 @@ namespace UnitTests.Models.Product
 
         #endregion TestSetup
 
-        #region Enum
+        #region AmatureEnum
 
         /// <summary>
         /// DisplayName 'Amature', should return 'Supercars'
@@ -38,6 +38,9 @@ namespace UnitTests.Models.Product
             //Assert
             Assert.AreEqual(data, result);
         }
+        #endregion AmatureEnum
+
+        #region AntiqueEnum
 
         /// <summary>
         /// DisplayName 'Antique', should return 'SUV'
@@ -55,7 +58,9 @@ namespace UnitTests.Models.Product
             //Assert
             Assert.AreEqual(data, result);
         }
+        #endregion AntiqueEnum
 
+        #region CollectableEnum
 
         /// <summary>
         /// DisplayName 'Collectable', should return 'Sedan'
@@ -73,8 +78,9 @@ namespace UnitTests.Models.Product
             //Assert
             Assert.AreEqual(data, result);
         }
+        #endregion CollectableEnum
 
-
+        #region CommercialEnum
         /// <summary>
         /// DisplayName 'Commercial', should return 'Hatchback'
         /// </summary>
@@ -91,7 +97,9 @@ namespace UnitTests.Models.Product
             //Assert
             Assert.AreEqual(data, result);
         }
+        #endregion CommercialEnum
 
+        #region emptyEnum
 
         /// <summary>
         /// DisplayName empty, should return empty string
@@ -110,6 +118,6 @@ namespace UnitTests.Models.Product
             Assert.AreEqual(data, result);
         }
 
-        #endregion Enum
+        #endregion emptyEnum
     }
 }
