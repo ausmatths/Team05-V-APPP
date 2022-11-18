@@ -1,14 +1,9 @@
 using Microsoft.Extensions.Logging;
-
 using NUnit.Framework;
-
 using Moq;
-
 using ContosoCrafts.WebSite.Pages;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace UnitTests.Pages.Payment
-
 {
     /// <summary>
     /// Tests Payment page
@@ -16,12 +11,17 @@ namespace UnitTests.Pages.Payment
     public class PaymentTests
     {
         #region TestSetup
+
+        // Variable for PaymentModel pageModel
         public static PaymentModel pageModel;
 
-        [SetUp]
+        /// <summary>
         /// Initialises the initial state
+        /// </summary>
+        [SetUp]
         public void TestInitialize()
         {
+            // Variable for mocklogger
             var MockLoggerDirect = Mock.Of<ILogger<PaymentModel>>();
 
             pageModel = new PaymentModel(MockLoggerDirect)
@@ -34,17 +34,21 @@ namespace UnitTests.Pages.Payment
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// OnGetif valid activity set, should return requestId
+        /// </summary>
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
-            /// Arrange
+            // Arrange
 
-            /// Act
+            // Act
             pageModel.OnGet();
 
-            /// Reset
+            // Reset
 
-            /// Assert
+            // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
         }
 
