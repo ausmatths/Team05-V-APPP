@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-
 using ContosoCrafts.WebSite.Models;
-
 using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
@@ -15,18 +13,32 @@ namespace ContosoCrafts.WebSite.Services
     /// </summary>
     public class JsonFileProductService
     {
+        /// <summary>
+        /// Constructor JsonFileProductService
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
+        /// <summary>
+        /// Getter for WebHostEnvironment 
+        /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        /// <summary>
+        /// JsonFileName gets products returns file name string
+        /// </summary>
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
+        /// <summary>
+        /// Gets all data from products.json
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<ProductModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
@@ -38,9 +50,9 @@ namespace ContosoCrafts.WebSite.Services
                     });
             }
         }
+
         /// <summary>
         /// Add Rating
-
         /// Take in the product ID and the rating
         /// If the rating does not exist, add it
         /// Save the update
@@ -55,6 +67,7 @@ namespace ContosoCrafts.WebSite.Services
                 return false;
             }
 
+            // gets all products
             var products = GetAllData();
 
             // Look up the product, if it does not exist, return
@@ -105,7 +118,11 @@ namespace ContosoCrafts.WebSite.Services
             {
                 return null;
             }
+
+            // gets all products
             var products = GetAllData();
+
+            // Gets first from dataSet
             var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
             if (productData == null)
             {
@@ -117,10 +134,8 @@ namespace ContosoCrafts.WebSite.Services
             productData.Description = data.Description.Trim();
             productData.Url = data.Url;
             productData.Image = data.Image;
-
             productData.Quantity = data.Quantity;
             productData.Price = data.Price;
-
             productData.CommentList = data.CommentList;
 
             SaveData(products);
@@ -156,11 +171,22 @@ namespace ContosoCrafts.WebSite.Services
         {
             var data = new ProductModel()
             {
+                // system generated id for the products
                 Id = System.Guid.NewGuid().ToString(),
+
+                // Title for the products
                 Title = product.Title,
+
+                // Description for the products
                 Description = product.Description,
+
+                // Url for the products
                 Url = product.Url,
+
+                // Image for the products
                 Image = product.Image,
+
+                // CommentList for the products
                 CommentList = product.CommentList,
             };
 
@@ -181,8 +207,11 @@ namespace ContosoCrafts.WebSite.Services
         {
             // Get the current set, and append the new record to it
             var dataSet = GetAllData();
+
+            // Gets first from dataSet
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
+            // gets all data in a newDataSet variable
             var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
 
             SaveData(newDataSet);
