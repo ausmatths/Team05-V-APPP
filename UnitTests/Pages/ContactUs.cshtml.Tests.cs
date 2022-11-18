@@ -22,6 +22,7 @@ namespace UnitTests.Pages.ContactUs
         [SetUp]
         public void TestInitialize()
         {
+            // Variable for mocklogger
             var MockLoggerDirect = Mock.Of<ILogger<ContactUsModel>>();
 
             pageModel = new ContactUsModel(MockLoggerDirect, TestHelper.ProductService)
