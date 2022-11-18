@@ -1,9 +1,5 @@
-using System.Linq;
-
 using Microsoft.AspNetCore.Mvc;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages.Product;
 using ContosoCrafts.WebSite.Models;
 
@@ -15,10 +11,14 @@ namespace UnitTests.Pages.Product.Delete
     public class DeleteTests
     {
         #region TestSetup
+
+        // Variable for DeleteModel pageModel
         public static DeleteModel pageModel;
 
+        /// <summary>
+        ///  Initialize DeleteModel 
+        /// </summary>
         [SetUp]
-        // Initialize DeleteModel 
         public void TestInitialize()
         {
             pageModel = new DeleteModel(TestHelper.ProductService)
@@ -29,8 +29,11 @@ namespace UnitTests.Pages.Product.Delete
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// OnGet should return products if model valid
+        /// </summary>
         [Test]
-        // OnGet should return products if model valid
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
@@ -42,9 +45,14 @@ namespace UnitTests.Pages.Product.Delete
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Jeep Cherokee", pageModel.Product.Title);
         }
+
         #endregion OnGet
 
         #region OnPost
+
+        /// <summary>
+        /// OnPost if valid should return products
+        /// </summary>
         [Test]
         public void OnPost_Valid_Should_Return_Products()
         {
@@ -66,8 +74,10 @@ namespace UnitTests.Pages.Product.Delete
             Assert.AreEqual(true, result.PageName.Contains("Index"));
         }
 
+        /// <summary>
+        /// OnPost should return page if not model valid
+        /// </summary>
         [Test]
-        // OnPost should return page if not model valid
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
             // Arrange
