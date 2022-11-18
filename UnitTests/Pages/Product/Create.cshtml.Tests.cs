@@ -1,9 +1,6 @@
 using System.Linq;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages.Product;
-
 
 namespace UnitTests.Pages.Product.Create
 {
@@ -13,6 +10,8 @@ namespace UnitTests.Pages.Product.Create
     public class CreateTests
     {
         #region TestSetup
+
+        // Variable for CreateModel pageModel
         public static CreateModel pageModel;
 
         [SetUp]
@@ -27,8 +26,11 @@ namespace UnitTests.Pages.Product.Create
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        ///  OnGet should return products if model valid
+        /// </summary>
         [Test]
-        // OnGet should return products if model valid
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
