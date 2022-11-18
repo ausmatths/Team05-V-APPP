@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
 using ContosoCrafts.WebSite.Models;
@@ -12,20 +11,28 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// </summary>
     public class ReadModel : PageModel
     {  
+        /// <summary>
         /// Read page will show the product info 
-        
+        /// </summary>
         public JsonFileProductService ProductService { get; }
         
-        /// <param name="logger"></param>
+        /// <summary>
+        /// Read model constructor
+        /// </summary>
         /// <param name="productService"></param>
         public ReadModel(JsonFileProductService productService)
         {
             ProductService = productService;
         }
 
+        // Variable type ProductModel to store first or default data from products
         public ProductModel Product;
 
-          /// <param name="id"></param>
+        /// <summary>
+        /// OnGet function for read
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public IActionResult OnGet(string id)
         {
             Product = ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(id));
