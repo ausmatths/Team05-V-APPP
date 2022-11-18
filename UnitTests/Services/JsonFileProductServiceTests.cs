@@ -1,13 +1,6 @@
 using System.Linq;
-
-using Microsoft.AspNetCore.Mvc;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Models;
-using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
-using System;
 
 namespace UnitTests.Pages.Product.AddRating
 {
@@ -17,6 +10,7 @@ namespace UnitTests.Pages.Product.AddRating
     public class JsonFileProductServiceTests
     {
         #region TestSetup
+
         /// <summary>
         /// TestInitialize
         /// </summary>
@@ -28,6 +22,7 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion TestSetup
 
         #region DeleteData
+
         /// <summary>
         /// Tests DeleteData function, should return valid product
         /// </summary>
@@ -57,6 +52,7 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion DeleteData
 
         #region UpdateData
+
         /// <summary>
         /// Tests UpdateData function, should return valid product
         /// </summary>
@@ -77,12 +73,13 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(data.Image, result.Image);
         }
 
+        /// <summary>
+        /// If invalid null product is added, UpdateData should return null
+        /// </summary>
         [Test]
-        // If invalid null product is added, UpdateData should return null
         public void UpdateData_InValid_Product_Null_Should_Return_Null()
         {
             // Arrange
-            // var data = TestHelper.ProductService.GetAllData().First();
 
             // Act
             var result = TestHelper.ProductService.UpdateData(null);
@@ -91,8 +88,10 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.IsNull(result);
         }
 
+        /// <summary>
+        /// If invalid null product is added inside update function, UpdateData should return null
+        /// </summary>
         [Test]
-        // If invalid null product is added inside update function, UpdateData should return null
         public void UpdateData_InValid_Product_Inside_UpdateData_Null_Should_Return_Null()
         {
             // Arrange
@@ -108,7 +107,6 @@ namespace UnitTests.Pages.Product.AddRating
             var result = TestHelper.ProductService.CreateData(data);
             result.Id = null;
             var result1 = TestHelper.ProductService.UpdateData(result);
-            
 
             // Assert
             Assert.IsNull(null, result.Id);
@@ -117,6 +115,7 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion UpdateData
 
         #region CreateData
+
         /// <summary>
         /// Tests createData function, should return valid product
         /// </summary>
@@ -135,7 +134,6 @@ namespace UnitTests.Pages.Product.AddRating
             // Act
             var result = TestHelper.ProductService.CreateData(data);
                 
-
             // Assert
             Assert.AreEqual(data.Title, result.Title);
             Assert.AreEqual(data.Description, result.Description);
@@ -146,25 +144,11 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion CreateData
 
         #region AddRating
+
         /// <summary>
-        /// Tests AddRating function
+        /// If invalid product is added, AddRating should return false
         /// </summary>
-        //[Test]
-        //public void AddRating_InValid_....()
-        //{
-        //    // Arrange
-
-        //    // Act
-        //    //var result = TestHelper.ProductService.AddRating(null, 1);
-
-        //    // Assert
-        //    //Assert.AreEqual(false, result);
-        //}
-
-        // ....
-
         [Test]
-        // If invalid product is added, AddRating should return false
         public void AddRating_InValid_Product_Null_Should_Return_False()
         {
             // Arrange
@@ -176,8 +160,10 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// If Empty product is added, AddRating should return false
+        /// </summary>
         [Test]
-        // If Empty product is added, AddRating should return false
         public void AddRating_InValid_Product_Empty_Should_Return_False()
         {
             // Arrange
@@ -189,8 +175,10 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// If product doesn't exist, AddRating should return false
+        /// </summary>
         [Test]
-        // If product doesn't exist, AddRating should return false
         public void AddRating_Invalid_Product_Does_Not_Exist_Should_Return_False()
         {
             // Arrange
@@ -202,8 +190,10 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// If product rating 5 is added, AddRating should return true
+        /// </summary>
         [Test]
-        // If product rating 5 is added, AddRating should return true
         public void AddRating_Valid_Product_Rating_5_Should_Return_True()
         {
             // Arrange
@@ -222,8 +212,10 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(5, dataNewList.Ratings.Last());
         }
 
+        /// <summary>
+        /// If product rating less than 0 is added, AddRating should return false
+        /// </summary>
         [Test]
-        // If product rating less than 0 is added, AddRating should return false
         public void AddRating_Valid_Product_Rating_Less_Than_0_Should_Return_False()
         {
             // Arrange
@@ -239,8 +231,10 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// If product ating greater that 5 is added, AddRating should return false
+        /// </summary>
         [Test]
-        // If product ating greater that 5 is added, AddRating should return false
         public void AddRating_Valid_Product_Rating_Greater_Than_5_Should_Return_False()
         {
             // Arrange
@@ -256,8 +250,10 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.AreEqual(false, result);
         }
 
+        /// <summary>
+        /// If valid product rating is added, AddRating should create array of ratings
+        /// </summary>
         [Test]
-        // If valid product rating is added, AddRating should create array of ratings
         public void AddRating_Product_Rating_Not_Exist_Should_Create_Array()
         {
             // Arrange
@@ -279,8 +275,11 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion AddRating
 
         #region TestCleanup
+
+        /// <summary>
+        /// Cleans up unnecessary states
+        /// </summary>
         [TearDown]
-        // Cleans up unnecessary states
         public void TestClean()
         {
         }
