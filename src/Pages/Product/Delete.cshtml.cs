@@ -1,8 +1,6 @@
 using System.Linq;
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
-
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
@@ -13,7 +11,9 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// </summary>
     public class DeleteModel : PageModel
     {
-        // Data middletier
+        /// <summary>
+        /// Data middletier
+        /// </summary>
         public JsonFileProductService ProductService { get; }
 
         /// <summary>
@@ -26,7 +26,9 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
-        // The data to show, bind to it for the post
+        /// <summary>
+        /// The data to show, bind to it for the post
+        /// </summary>
         [BindProperty]
         public ProductModel Product { get; set; }
 
