@@ -9,10 +9,18 @@ namespace UnitTests.Models.Product
     /// </summary>
     public class ProductTypeEnumTests
     {
+        #region TestSetup
+        /// <summary>
+        /// TestInitialize for ProductTypeEnums
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
         }
+
+        #endregion TestSetup
+
+        #region Enum
 
         /// <summary>
         /// DisplayName 'Amature', should return 'Supercars'
@@ -101,5 +109,7 @@ namespace UnitTests.Models.Product
             //Assert
             Assert.AreEqual(data, result);
         }
+
+        #endregion Enum
     }
 }
