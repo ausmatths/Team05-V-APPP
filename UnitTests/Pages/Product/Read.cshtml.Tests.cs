@@ -1,8 +1,5 @@
-
 using Microsoft.AspNetCore.Mvc;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages.Product;
 
 namespace UnitTests.Pages.Product.Read
@@ -13,8 +10,13 @@ namespace UnitTests.Pages.Product.Read
     public class ReadTests
     {
         #region TestSetup
+
+        // Varibale for ReadModel pageModel
         public static ReadModel pageModel;
 
+        /// <summary>
+        /// TestInitialize for Read page testing
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -26,6 +28,10 @@ namespace UnitTests.Pages.Product.Read
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// OnGet if valid should return products
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Return_Products()
         {
@@ -39,6 +45,9 @@ namespace UnitTests.Pages.Product.Read
             Assert.AreEqual("Jeep Cherokee", pageModel.Product.Title);
         }
 
+        /// <summary>
+        /// OnGet if id bogus should return products
+        /// </summary>
         [Test]
         public void OnGet_InValid_Id_Bougs_Should_Return_Products()
         {
