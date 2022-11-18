@@ -1,11 +1,7 @@
 using System.Diagnostics;
-
 using Microsoft.Extensions.Logging;
-
 using NUnit.Framework;
-
 using Moq;
-
 using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Error
@@ -16,12 +12,17 @@ namespace UnitTests.Pages.Error
     public class ErrorTests
     {
         #region TestSetup
+
+        // Varibale for ErrorModel pageModel
         public static ErrorModel pageModel;
 
+        /// <summary>
+        /// Initialise initial state
+        /// </summary>
         [SetUp]
-        // Initialise initial state
         public void TestInitialize()
         {
+            // Variable for mocklogger
             var MockLoggerDirect = Mock.Of<ILogger<ErrorModel>>();
 
             pageModel = new ErrorModel(MockLoggerDirect)
@@ -34,12 +35,14 @@ namespace UnitTests.Pages.Error
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// OnGet should return requaest id on valid activity 
+        /// </summary>
         [Test]
-        // OnGet should return requaest id on valid activity 
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
         {
             // Arrange
-
             Activity activity = new Activity("activity");
             activity.Start();
 
@@ -54,8 +57,10 @@ namespace UnitTests.Pages.Error
             Assert.AreEqual(activity.Id, pageModel.RequestId);
         }
 
+        /// <summary>
+        /// OnGet should return TraceIdentifier on Invalid activity/ null
+        /// </summary>
         [Test]
-        // OnGet should return TraceIdentifier on Invalid activity/ null
         public void OnGet_InValid_Activity_Null_Should_Return_TraceIdentifier()
         {
             // Arrange
