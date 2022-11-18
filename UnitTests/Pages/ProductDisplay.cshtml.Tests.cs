@@ -1,11 +1,7 @@
 using System.Linq;
-
 using Microsoft.Extensions.Logging;
-
 using Moq;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.ProductDisplay
@@ -17,12 +13,16 @@ namespace UnitTests.Pages.ProductDisplay
     {
         #region TestSetup
 
+        // Varibale for ProductDisplayModel pageModel
         public static ProductDisplayModel pageModel;
 
+        /// <summary>
+        /// Initialize ProductDisplay page state
+        /// </summary>
         [SetUp]
-        // Initialize ProductDisplay page state
         public void TestInitialize()
         {
+            // Varibale for mocklogger
             var MockLoggerDirect = Mock.Of<ILogger<IndexModel>>();
 
             pageModel = new ProductDisplayModel(MockLoggerDirect, TestHelper.ProductService)
@@ -33,8 +33,11 @@ namespace UnitTests.Pages.ProductDisplay
         #endregion TestSetup
 
         #region OnGet
+
+        /// <summary>
+        /// OnGet method should return products
+        /// </summary>
         [Test]
-        // OnGet method should return products
         public void OnGet_Valid_Should_Return_Products()
         {
             // Arrange
