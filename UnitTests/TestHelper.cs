@@ -7,9 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
-
 using Moq;
-
 using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests
@@ -27,16 +25,37 @@ namespace UnitTests
     /// </summary>
     public static class TestHelper
     {
+        // Helper to hold the web start settings
         public static Mock<IWebHostEnvironment> MockWebHostEnvironment;
+
+        // Helper to hold UrlHelperFactory
         public static IUrlHelperFactory UrlHelperFactory;
+
+        // Helper to hold the HttpContextDefault
         public static DefaultHttpContext HttpContextDefault;
+
+        // Helper to hold the WebHostEnvironment
         public static IWebHostEnvironment WebHostEnvironment;
+
+        // Helper to hold the ModelState
         public static ModelStateDictionary ModelState;
+
+        // Helper to hold the ActionContext
         public static ActionContext ActionContext;
+
+        // Helper to hold the ModelMetadataProvider
         public static EmptyModelMetadataProvider ModelMetadataProvider;
+
+        // Helper to hold the ViewData
         public static ViewDataDictionary ViewData;
+
+        // Helper to hold the TempData
         public static TempDataDictionary TempData;
+
+        // Helper to hold the PageContext
         public static PageContext PageContext;
+
+        // Helper to hold the ProductService
         public static JsonFileProductService ProductService;
 
         /// <summary>
