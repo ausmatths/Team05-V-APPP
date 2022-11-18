@@ -1,5 +1,4 @@
 using System.Diagnostics;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -22,8 +21,13 @@ namespace ContosoCrafts.WebSite.Pages
         /// </summary>
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
+        // Logger for Error page
         private readonly ILogger<ErrorModel> _logger;
 
+        /// <summary>
+        /// Instantiating variable logger
+        /// </summary>
+        /// <param name="logger"></param>
         public ErrorModel(ILogger<ErrorModel> logger)
         {
             _logger = logger;
