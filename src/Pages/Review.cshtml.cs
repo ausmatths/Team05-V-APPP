@@ -3,16 +3,27 @@ using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+	/// <summary>
+	/// Product reveiw page
+	/// </summary>
 	public class ReviewModel : PageModel
 	{
+		// Variable for logger
 		private readonly ILogger<ReviewModel> _logger;
 
-		public ReviewModel(ILogger<ReviewModel> logger)
+        /// <summary>
+        /// Constructor for ReviewModel
+        /// </summary>
+        /// <param name="logger"></param>
+        public ReviewModel(ILogger<ReviewModel> logger)
 		{
 			_logger = logger;
 		}
 
-		public void OnGet()
+        /// <summary>
+        /// OnGet for ReviewModel
+        /// </summary>
+        public void OnGet()
 		{
 		}
 	}
