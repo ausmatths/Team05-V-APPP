@@ -2,6 +2,7 @@ using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Linq;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
@@ -18,7 +19,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// getter setter for product
         /// </summary>
-        public ProductModel product { get; private set; }
 
         /// <summary>
         /// Linking to ProductService
@@ -29,14 +29,40 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
+        [BindProperty]
+        public ProductModel Product { get; set; }
+
         /// <summary>
-        /// Posts the product and redirects to index page of product
+        /// OnGet gets frist data or default from products
         /// </summary>
-        /// <param name="product"></param>
-        /// <returns></returns>
-        public IActionResult OnPost(ProductModel product)
+        /// <param name="id"></param>
+        public void OnGet()
         {
-            ProductService.CreateData(product);
+            Product = new ProductModel()
+            {
+                Id = System.Guid.NewGuid().ToString(),
+                Maker = "Enter Maker",
+                Title = "Enter Title",
+                Description = "Enter Description",
+                Price = 0,
+                Url = "Enter URL",
+                Image = ""
+            };
+        }
+
+        /// <summary>
+        /// Posts the data in product and redirects to product index page
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            ProductService.CreateData(Product);
+
             return RedirectToPage("./Index");
         }
     }

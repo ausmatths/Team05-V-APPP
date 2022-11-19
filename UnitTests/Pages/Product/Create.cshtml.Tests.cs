@@ -1,6 +1,9 @@
 using System.Linq;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages.Product;
+using ContosoCrafts.WebSite.Models;
+using Microsoft.AspNetCore.Mvc;
+using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Product.Create
 {
@@ -15,7 +18,6 @@ namespace UnitTests.Pages.Product.Create
         public static CreateModel pageModel;
 
         [SetUp]
-        // Initialize CreateModel
         public void TestInitialize()
         {
             pageModel = new CreateModel(TestHelper.ProductService)
@@ -28,21 +30,65 @@ namespace UnitTests.Pages.Product.Create
         #region OnGet
 
         /// <summary>
-        ///  OnGet should return products if model valid
+        /// OnGet should return Products
         /// </summary>
         [Test]
-        public void OnGet_Valid_Should_Return_Products()
+        public void OnGet_Valid_Should_Create_Product()
         {
             // Arrange
-            var oldCount = TestHelper.ProductService.GetAllData().Count();
 
             // Act
             pageModel.OnGet();
 
             // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(oldCount + 0, TestHelper.ProductService.GetAllData().Count());
+            Assert.AreNotEqual(null, pageModel.Product.Id);
         }
         #endregion OnGet
+
+        #region OnPost
+
+        /// <summary>
+        /// OnPost shoould update products
+        /// </summary>
+        [Test]
+        public void OnPost_Valid_Should_Return_Products()
+        {
+            // Arrange
+            pageModel.Product = new ProductModel
+            {
+                Id = "Jeep_Grand_Cherokee",
+                Title = "title",
+                Description = "description",
+                Url = "url",
+                Image = "image"
+            };
+
+            // Act
+            var result = pageModel.OnPost() as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, result.PageName.Contains("Index"));
+        }
+
+        /// <summary>
+        /// OnPost should return false if pageModel is invalid 
+        /// </summary>
+        [Test]
+        public void OnPost_InValid_Model_NotValid_Return_Page()
+        {
+            // Arrange
+
+            // Force an invalid error state
+            pageModel.ModelState.AddModelError("bogus", "bogus error");
+
+            // Act
+            pageModel.OnGet();
+            var result = pageModel.OnPost() as ActionResult;
+
+            // Assert
+            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+        }
+        #endregion OnPost
     }
 }
