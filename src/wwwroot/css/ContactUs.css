@@ -100,3 +100,23 @@
     color: #000;
     transition: 0.2s;
 }
+
+@media screen and (max-width:991px) {
+    .contact-parent {
+        display: block;
+        width: 100%;
+    }
+
+    .child1 {
+        display: none;
+    }
+
+    .child2 {
+        background-image: linear-gradient(rgba(225,225,225,0.7), rgba(225,225,225,0.7)), url('../Revv Car Rental.png');
+        background-size: cover;
+    }
+
+    .inside-contact input, .inside-contact textarea {
+        background-color: #fff
+    }
+}
