@@ -52,6 +52,32 @@
                             </span>
                         </p>
                     </div>
+
+                    <div class="contact-child child2">
+                        <div class="inside-contact">
+                            <h2>Contact Us</h2>
+                            <h3>
+                                <Label class="form-control-file" runat="server" Text=""></Label>
+                            </h3>
+
+                            <p>Name *</p>
+                            <input name="txt_name" runat="server" Required="required"></input>
+
+                            <p>Email *</p>
+                            <input name="txt_email" runat="server" Required="required"></input>
+
+                            <p>Phone *</p>
+                            <input name="txt_phone" runat="server" Required="required"></input>
+
+                            <p>Subject *</p>
+                            <input name="txt_subject" runat="server" Required="required"></input>
+
+                            <p>Message *</p>
+                            <input name="txt_message" runat="server" Required="required" TextMode="MultiLine" Rows="10"></input>
+
+                            <button type="btn_send" runat="server" Text="SEND" class="btn btn-primary form-control">SEND</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
