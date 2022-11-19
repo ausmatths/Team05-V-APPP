@@ -1,8 +1,132 @@
 ﻿@page
 @model ReviewModel
 @{
-    ViewData["Title"] = "Product Review";
+    ViewData["Title"] = "WE APPRECIATE YOUR REVIEW!";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>This page to detail your site's Product Review.</p>
+
+
+<h6 id="fh6">Your review will help us to improve our customer services.</h6>
+
+
+<form id="feedback" action="">
+    <div class="pinfo">Your personal info</div>
+
+    <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input name="name" placeholder="John Doe" class="form-control" type="text">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input name="email" type="email" class="form-control" placeholder="john.doe@yahoo.com">
+            </div>
+        </div>
+    </div>
+
+    <div class="pinfo">Rate our overall services.</div>
+
+
+    <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-heart"></i></span>
+                <select class="form-control" id="rate">
+                    <option value="1star">1</option>
+                    <option value="2stars">2</option>
+                    <option value="3stars">3</option>
+                    <option value="4stars">4</option>
+                    <option value="5stars">5</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="pinfo">Write your feedback.</div>
+
+
+    <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                <textarea class="form-control" id="review" rows="3"></textarea>
+
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Testimonials Section </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <i class="fas fa-quote-left quote"></i>
+            <p>Ask for Revv Car, he is the best! He is amazing and makes the process really smooth. He goes above and beyond for his customers and tries to help as much as possible. Great service and they know they’re stuff..</p>
+            <div class="content">
+                <div class="info">
+                    <div class="name">Alex Smith</div>
+                    <div class="job">Designer | Developer</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-quote-left quote"></i>
+            <p>I had a wonderful experience purchasing a used vehicle. The process was stress free and pleasant. Revv Car was very thorough and knowledgeable. He was able to find me a vehicle that suited my needs.</p>
+            <div class="content">
+                <div class="info">
+                    <div class="name">Steven Chris</div>
+                    <div class="job">YouTuber | Blogger</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>               
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-quote-left  quote"></i>
+            <p>This was the easiest dealership I have worked with. I was in and out in 2 hours. Revv Car was efficient but also made sure that everything was covered at the best price in town. I recommended anyone to go see Revv Car</p>
+            <div class="content">
+                <div class="info">
+                    <div class="name">Chris Lawerence</div>
+                    <div class="job">Freelancer | Advertiser</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
