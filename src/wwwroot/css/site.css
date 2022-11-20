@@ -101,11 +101,11 @@ a {
     background-color: #252152;
     border-color: #252152;
 }
-.btn-primary:hover {
-    color: #fff;
-    background-color: #e9a8a6;
-    border-color: #e9a8a6;
-}
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #080707;
+        border-color: #e9a8a6;
+    }
 
 /* Sticky footer styles */
 html {
