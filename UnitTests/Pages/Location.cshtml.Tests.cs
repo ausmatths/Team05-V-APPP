@@ -6,13 +6,13 @@ using ContosoCrafts.WebSite.Pages;
 namespace UnitTests.Pages.Location
 {
     /// <summary>
-    /// Tests Payment page
+    /// Tests Location page
     /// </summary>
     public class LocationTests
     {
         #region TestSetup
 
-        // Variable for PaymentModel pageModel
+        // Variable for LocationModel pageModel
         public static LocationModel pageModel;
 
         /// <summary>
