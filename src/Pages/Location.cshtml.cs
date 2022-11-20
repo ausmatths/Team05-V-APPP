@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 namespace ContosoCrafts.WebSite.Pages
 {
     /// <summary>
-    /// Payment page
+    /// Location page
     /// </summary>
     public class LocationModel : PageModel
     {
@@ -12,7 +12,7 @@ namespace ContosoCrafts.WebSite.Pages
         private readonly ILogger<LocationModel> _logger;
 
         /// <summary>
-        /// Constructor for PaymentModel
+        /// Constructor for LocationModel
         /// </summary>
         /// <param name="logger"></param>
         public LocationModel(ILogger<LocationModel> logger)
@@ -21,7 +21,7 @@ namespace ContosoCrafts.WebSite.Pages
         }
 
         /// <summary>
-        /// OnGet for payments
+        /// OnGet for Location
         /// </summary>
         public void OnGet()
         {
