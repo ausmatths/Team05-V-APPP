@@ -47,3 +47,18 @@
     font-size: 18px;
     line-height: 1.5;
 }
+.contant-section .contant .button{
+    margin-top: 40px;
+}
+.contant-section .contant .button a{
+    background-color: #3d3d3d;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+.contant-section .contant .button a:hover{
+    background-color: #a52a2a;
+    color:#fff;
+}
