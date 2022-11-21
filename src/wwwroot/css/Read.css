@@ -36,3 +36,8 @@
     text-transform: uppercase;
     font-size: 28px;
 }
+.contant-section .contant h3 {
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 21px;
+}
