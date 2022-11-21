@@ -41,3 +41,9 @@
     color: #5d5d5d;
     font-size: 21px;
 }
+.contant-section .contant p {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
