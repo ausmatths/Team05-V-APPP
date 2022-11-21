@@ -73,3 +73,40 @@
 .contant-section .social i:hover{
     color:#3d3d3d;
 }
+@media screen and (max-width: 78px) {
+    .container{
+        width: 80%;
+        display:flex;
+        margin: auto;
+        padding-top: 50px;
+    }
+    .contant-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .image-section {
+        float: right;
+        width: 100%;
+    }
+    .image-section img{
+        width:100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .contant-section .title{
+        text-align:center;
+        font-size: 19px;
+    }
+    .contant-section .contant .button{
+        text-align:center;
+    }
+    .contant-section .contant .button a{
+        padding: 9px 30px;
+    }
+    .contant-section .social{
+        text-align:center;
+    }
+}
