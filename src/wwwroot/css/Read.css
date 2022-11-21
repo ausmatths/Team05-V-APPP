@@ -62,3 +62,14 @@
     background-color: #a52a2a;
     color:#fff;
 }
+.contant-section .social{
+    margin: 40px 40px;
+}
+.contant-section .social i{
+    color:#a52a2a;
+    font-size: 30px;
+    padding:10px 10px;
+}
+.contant-section .social i:hover{
+    color:#3d3d3d;
+}
