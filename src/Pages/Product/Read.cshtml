@@ -21,6 +21,19 @@
                 <div class="title">
                     <h1>@Model.Product.Title</h1>
                 </div>
+                <div class="contant">
+                    <h3>@Model.Product.Id</h3>
+                    <p>@Model.Product.Description</p>
+                    <div class="button">
+                        <a href="">Read More...</a>
+                        <br />
+                        <br />
+                        <p>
+                            <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
+                            <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-primary">Delete</a> &nbsp; &nbsp;
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
