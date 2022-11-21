@@ -12,3 +12,9 @@
     min-height: 100vh;
     background-color: transparent;
 }
+.container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+}
