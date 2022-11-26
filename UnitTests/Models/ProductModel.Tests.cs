@@ -1,11 +1,5 @@
 using System.Linq;
-
-using Microsoft.Extensions.Logging;
-
-using Moq;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Models;
 using System.Collections.Generic;
 using System.Text.Json;
