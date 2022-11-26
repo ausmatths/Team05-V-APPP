@@ -27,7 +27,7 @@ namespace UnitTests.Components
         #region DefaultProduct
 
         /// <summary>
-        /// ProductList_Default_Should_Return_Content
+        /// ProductList when there is default it should return the contents of products
         /// </summary>
         [Test]
         public void ProductList_Default_Should_Return_Content()
@@ -50,7 +50,7 @@ namespace UnitTests.Components
         #region SelectProduct
 
         /// <summary>
-        /// SelectProduct_Valid_ID_jenlooper_Should_Return_Content
+        /// SelectProduct, when Valid_ID is provided it should return the content of products
         /// </summary>
         [Test]
         public void SelectProduct_Valid_ID_jenlooper_Should_Return_Content()
@@ -81,7 +81,7 @@ namespace UnitTests.Components
         #region SubmitRating
 
         /// <summary>
-        /// SubmitRating_Valid_ID_Click_Unstared_Should_Increment_Count_And_Check_Star
+        /// SubmitRating when Valid_ID is clicked and it is unstared it should increment count and check the stars
         /// </summary>
         [Test]
         public void SubmitRating_Valid_ID_Click_Unstared_Should_Increment_Count_And_Check_Star()
