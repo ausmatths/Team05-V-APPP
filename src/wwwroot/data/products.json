@@ -58,6 +58,32 @@
     "CommentList": []
   },
   {
+    "Id": "Ford Mustang",
+    "Maker": "sailorhg",
+    "img": "https://www.avis.com/content/dam/cars/xl/2021/ford/2021-ford-mustang-fastback-gt-coupe-white_featured.png",
+    "Url": "https://www.ford.com/cars/mustang/?gnav=header-cars-vhp",
+    "Title": "Ford Mustang GT",
+    "Description": "The Mustang Mach 1 backs up its unique, aggressive styling with more power than the Mustang GT (480 horsepower vs. 460 horsepower) and a standard Mach 1 Handling Package with an adjustable suspension, 19-inch wheels, and extra-wide Michelin Pilot Sport Cup 2 tires",
+    "Ratings": null,
+    "ProductType": 55,
+    "Quantity": null,
+    "Price": 53,
+    "CommentList": []
+  },
+  {
+    "Id": "Mercedes C Class",
+    "Maker": "sailorhg",
+    "img": "https://images.hertz.com/content/US/exceptions/mercedes-eclass-2017.jpg",
+    "Url": "https://www.mbusa.com/en/vehicles/class/c-class/cabriolet",
+    "Title": "Mercedes C Class",
+    "Description": "The Mercedes-Benz C-Class is a series of compact executive cars produced by Mercedes-Benz Group AG. Introduced in 1993 as a replacement for the 190 (W201) range, the C-Class was the smallest model in the marque's line-up",
+    "Ratings": null,
+    "ProductType": 55,
+    "Quantity": null,
+    "Price": 53,
+    "CommentList": []
+  },
+  {
     "Id": "Toyota_RAV4_XLE",
     "Maker": "sailorhg",
     "img": "https://content-images.carmax.com/qeontfmijmzv/3l2mfWVuafhszLECQBjRCo/d0501b3b95212d5894a2c8edbf6143ff/01-2018_Toyota_RAV4_XLE_EVOX.jpg?fm=webp",
@@ -86,12 +112,40 @@
     "CommentList": []
   },
   {
+    "Id": "Mazda 3",
+    "Maker": "selinazawacki",
+    "img": "https://www.avis.com/content/dam/cars/m/2019/mazda/2019-mazda-3-5door-hatchback-black_featured.png",
+    "Url": "https://www.caranddriver.com/mazda/mazda-3",
+    "Title": "Mazda 3",
+    "Description": "Mazda offers two different engines with the 3, starting with a base 191-hp 2.5-liter four-cylinder. This engine is offered with front-wheel drive or, on the Carbon Edition and Premium trims, an all-wheel drive system. A 250-hp turbocharged 2.5-liter is available, but only on the most expensive trims. ",
+    "Ratings": [
+      4
+    ],
+    "ProductType": 1,
+    "Quantity": null,
+    "Price": 43,
+    "CommentList": []
+  },
+  {
     "Id": "Jeep_Wrangler_Unlimited",
     "Maker": "selinazawacki",
     "img": "https://content-images.carmax.com/qeontfmijmzv/5anrhAgbgBmrv9eqMkbS1X/bc0212e6872596b872c22acdf1fdacae/08-2020_Jeep_Wrangler_Unlimited__EVOX.jpg?fm=webp",
     "Url": "https://www.googleadservices.com/pagead/aclk?sa=L\u0026ai=DChcSEwj3scaE-dT6AhXGAK0GHZ5yBC8YABABGgJwdg\u0026ohost=www.google.com\u0026cid=CAESbOD2XNG6uYmfDlDk1cIkWEMziH-zRBH3LiKsIMi8BUJam6umecRvrOc70eddgBCl2I48RZfsB1P8YEg3Wgu7S3k5BmRqVG8O-seKRX6_0fXd_7bkojRbLY-yjNno7Dd4bdu5UF2nrsk-i5wlzA\u0026sig=AOD64_3YjSJhwLSWQwfyhu0mkZfZgsuR5Q\u0026q\u0026adurl\u0026ved=2ahUKEwjEwbeE-dT6AhVnHzQIHY42BKYQ0Qx6BAgHEAM\u0026nis=2",
     "Title": "Jeep Wrangler",
     "Description": "Jeep Wrangler is the 4 wheel drive SUV with 470 HP V8 powered engine. Tried, tested, Trail Rated® and true. The 2023 Jeep Wrangler is the original icon of adventure. Experience the legend and start your journey.",
+    "Ratings": null,
+    "ProductType": 5,
+    "Quantity": null,
+    "Price": 49,
+    "CommentList": []
+  },
+  {
+    "Id": "Chevrolet Tahoe",
+    "Maker": "selinazawacki",
+    "img": "https://www.enterprise.com/content/dam/global-vehicle-images/suvs/CHEVROLET_TAHOE_2016.png",
+    "Url": "https://www.chevrolet.com/suvs/tahoe",
+    "Title": "Chevrolet Tahoe",
+    "Description": "Chevrolet Tahoe 3.0L Turbo-Diesel engine, gives you the most fuel-efficient full-size SUV,† plus a unique blend of power and cutting-edge capability.",
     "Ratings": null,
     "ProductType": 5,
     "Quantity": null,
@@ -112,12 +166,51 @@
     "CommentList": []
   },
   {
+    "Id": "Ford Fusion",
+    "Maker": "vogueandcode",
+    "img": "https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FUSION_2020.png",
+    "Url": "https://www.cars.com/research/ford-fusion-2020/",
+    "Title": "Ford Fusion",
+    "Description": "The Ford Fusion is a mid-size sedan that seats up to five people. A 175-horsepower, 2.5-liter four-cylinder engine is standard, but a selection of turbocharged four-cylinder engines is available. Hybrid and plug-in hybrid (Energi) variants are also offered..",
+    "Ratings": null,
+    "ProductType": 130,
+    "Quantity": null,
+    "Price": 60,
+    "CommentList": []
+  },
+  {
+    "Id": "Honda Sonata",
+    "Maker": "vogueandcode",
+    "img": "https://mikealbertrental.com/wp-content/uploads/2018/02/ma-vehicle-hyundai-elantra-1030x591.png",
+    "Url": "https://www.hyundaiusa.com/us/en/vehicles/sonata",
+    "Title": "Honda Sonata",
+    "Description": "Hyundai gives an otherwise ho-hum segment—mid-size family sedans—some desperately needed flavor with the eye-catching Sonata. The Sonata makes a strong argument with a lineup consisting of a well-equipped base model, a gas-sipping hybrid, and a 290-hp N Line for thrill seekers who are okay with front-wheel drive. A pair of inline-fours round out the rest of the Sonata’s powertrain lineup, with either a 191-hp base engine or a 180-hp turbo for SEL Plus and Limited trims.",
+    "Ratings": null,
+    "ProductType": 130,
+    "Quantity": null,
+    "Price": 60,
+    "CommentList": []
+  },
+  {
     "Id": "GMC_Canyon_Elevation",
     "Maker": "vogueandcode",
     "img": "https://content-images.carmax.com/qeontfmijmzv/4iNSxaqq3z5EUoINFa6Ic3/0f21ae750640e5ec1fd4ac9b4a4495c3/2021_GMC_Canyon_Elevation_EVOX.jpg?fm=webp",
     "Url": "https://www.gmc.com/trucks/canyon/elevation?ppc=GOOGLE_700000001905319_71700000055443166_58700005223380573_p46138161677\u0026d_src=313715\u0026d_adsrc=3876784\u0026d_campaign=71700000055443166\u0026d_site=GOOGLE\u0026d_adgroup=58700005223380573\u0026d_keyword=\u002Bgmc%20\u002Bcanyon\u0026gclick=Cj0KCQjw4omaBhDqARIsADXULuVuHszv8YO-5GgKXcn67F7ANU6mURRXMec357qtX5mu-8m-cja6G00aAhi0EALw_wcB\u0026gclid=Cj0KCQjw4omaBhDqARIsADXULuVuHszv8YO-5GgKXcn67F7ANU6mURRXMec357qtX5mu-8m-cja6G00aAhi0EALw_wcB\u0026gclsrc=aw.ds",
     "Title": "GMC Canyon",
     "Description": "GMC Canyon is known as the Herculean with 401hp 6.6 liter V8 with luxury 10 speed automatic transmission. he Chevrolet Colorado and its twin, the GMC Canyon were jointly designed by GM's North American operations, GM's Brazil operations, and Isuzu, which began selling its own version worldwide in 2002.[3] In late 2005, Isuzu offered a version in North America called the Isuzu i-series. This North American model Isuzu shared North American powertrains, styling, and equipment with the Colorado/Canyon twins and differed from Isuzu's worldwide offering. All Chevrolet, GMC, and Isuzu versions worldwide are based on the GMT355.",
+    "Ratings": null,
+    "ProductType": 5,
+    "Quantity": null,
+    "Price": 38,
+    "CommentList": []
+  },
+  {
+    "Id": "Ford Ranger",
+    "Maker": "vogueandcode",
+    "img": "https://content-images.carmax.com/qeontfmijmzv/4iNSxaqq3z5EUoINFa6Ic3/0f21ae750640e5ec1fd4ac9b4a4495c3/2021_GMC_Canyon_Elevation_EVOX.jpg?fm=webp",
+    "Url": "https://www.gmc.com/trucks/canyon/elevation?ppc=GOOGLE_700000001905319_71700000055443166_58700005223380573_p46138161677\u0026d_src=313715\u0026d_adsrc=3876784\u0026d_campaign=71700000055443166\u0026d_site=GOOGLE\u0026d_adgroup=58700005223380573\u0026d_keyword=\u002Bgmc%20\u002Bcanyon\u0026gclick=Cj0KCQjw4omaBhDqARIsADXULuVuHszv8YO-5GgKXcn67F7ANU6mURRXMec357qtX5mu-8m-cja6G00aAhi0EALw_wcB\u0026gclid=Cj0KCQjw4omaBhDqARIsADXULuVuHszv8YO-5GgKXcn67F7ANU6mURRXMec357qtX5mu-8m-cja6G00aAhi0EALw_wcB\u0026gclsrc=aw.ds",
+    "Title": "Ford Ranger",
+    "Description": "The 2023 Ford Ranger is an enticing small pickup truck that offers excellent towing and hauling capabilities, a stout engine and a reasonably spacious interior.",
     "Ratings": null,
     "ProductType": 5,
     "Quantity": null,
