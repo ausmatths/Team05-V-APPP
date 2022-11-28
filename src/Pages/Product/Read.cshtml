@@ -57,25 +57,25 @@
     // If there are Comments, show them.
     if (Model.Product.CommentList.Count > 0)
     {
-        <br />
-        <br />
+    <br />
+    <br />
 
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var comment in Model.Product.CommentList)
-                {
+    <table class="table table-bordered table-striped">
+                <thead>
                     <tr>
-                        <td>@comment.Comment</td>
-                        <td><a asp-page="DeleteComment" asp-route-CommentId="@comment.Id" asp-route-ProductId="@Model.Product.Id">Delete</a></td>
+                        <th>Title</th>
+                        <th>Action</th>
                     </tr>
+                </thead>
+                <tbody>
+                    @foreach (var comment in Model.Product.CommentList)
+                {
+                        <tr>
+                            <td>@comment.Comment</td>
+                            <td><a asp-page="DeleteComment" asp-route-CommentId="@comment.Id" asp-route-ProductId="@Model.Product.Id">Delete</a></td>
+                        </tr>
                 }
-            </tbody>
-        </table>
+                </tbody>
+    </table>
     }
-}
+ }
