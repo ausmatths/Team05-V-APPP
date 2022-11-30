@@ -25,6 +25,9 @@
                     <h3>@Model.Product.Id</h3>
                     <p>@Model.Product.Description</p>
                     <div class="button">
+                        <a href="">Read More...</a>
+                        <br />
+                        <br />
                         <p>
                             <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-primary">Update</a> &nbsp; &nbsp;
                             <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-primary">Delete</a> &nbsp; &nbsp;
@@ -54,25 +57,25 @@
     // If there are Comments, show them.
     if (Model.Product.CommentList.Count > 0)
     {
-    <br />
-    <br />
+        <br />
+        <br />
 
-    <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var comment in Model.Product.CommentList)
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var comment in Model.Product.CommentList)
                 {
-                        <tr>
-                            <td>@comment.Comment</td>
-                            <td><a asp-page="DeleteComment" asp-route-CommentId="@comment.Id" asp-route-ProductId="@Model.Product.Id">Delete</a></td>
-                        </tr>
+                    <tr>
+                        <td>@comment.Comment</td>
+                        <td><a asp-page="DeleteComment" asp-route-CommentId="@comment.Id" asp-route-ProductId="@Model.Product.Id">Delete</a></td>
+                    </tr>
                 }
-                </tbody>
-    </table>
+            </tbody>
+        </table>
     }
- }
+}
