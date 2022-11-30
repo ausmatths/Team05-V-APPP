@@ -18,33 +18,34 @@
     <link href="~/css/ContactUs.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="bg-white">
         <div>
             <div class="container">
                 <div class="contact-parent">
                     <div class="contact-child child2">
                         <div class="inside-contact">
-                            <h2>Design</h2>
+                            <h4>Personalize your recommendations!</h4>
                             <h3>
                                 <Label class="form-control-file" runat="server" Text=""></Label>
                             </h3>
-
                             <p>User ID*</p>
-                            <input type="txt_name" runat="server" Required="required" placeholder="User ID"></input>
+                            <input type="text_name" placeholder="User ID" pattern="[a-zA-Z]+" title="Please enter Alphabets." required="" /></input>
 
                             <p>Car*</p>
-                            <input type="txt_car" runat="server" Required="required" placeholder="Car"></input>
+                            <input type="txt_car" runat="server" Required="" pattern="[a-zA-Z]+" placeholder="Car"></input>
 
                             <p>Discount*</p>
-                            <input type="txt_discount" runat="server" Required="required" placeholder="Discount %"></input>
+                            <input type="txt_discount" runat="server" Required="" pattern="[0-9]{10}" placeholder="Discount %"></input>
 
                             <p>Mininum cost*</p>
-                            <input type="txt_minimum_cost" runat="server" Required="required" placeholder="$ Minimum Cost"></input>
+                            <input type="txt_minimum_cost" runat="server" Required="" pattern="[0-9]{10}" placeholder="$ Minimum Cost"></input>
 
                             <p>Maximum cost*</p>
-                            <input type="txt_maximum_cost" runat="server" Required="required" placeholder="$ Maximum Cost"></input>
+                            <input type="txt_maximum_cost" runat="server" Required="" pattern="[0-9]{10}" placeholder="$ Maximum Cost"></input>
 
-                            <button type="btn_save" runat="server" Text="SAVE" OnClick="btn_send_OnClick">SAVE</button>
+                            <a button type="btn-save" class="btn btn-primary form-control" asp-page="/index">Send</a>
+
+                            <h3>You will receive an email with your recommendations. Thank you!</h3>
                         </div>
                     </div>
                 </div>
